@@ -52,8 +52,12 @@ export const NavBar = () => {
 						<Button
 							sx={classes.checkoutBtn}
 							startIcon={
-								<span key='lock' style={{ marginBottom: '2px' }}>
-									<Lock />
+								<span
+									key='lock'
+									className='flex items-center justify-center'
+									style={{ width: 20, height: 20 }}
+								>
+									<Lock width={20} />
 								</span>
 							}
 						>

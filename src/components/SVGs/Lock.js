@@ -5,7 +5,7 @@ export const Lock = ({ color = 'white', height = '29' }) => {
 		<svg
 			preserveAspectRatio='xMidYMid meet'
 			width='100%'
-			height='18'
+			height={height}
 			viewBox='0 0 18 18'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
