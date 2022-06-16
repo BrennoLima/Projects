@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 // Components
-import { VisaLogo } from '../SVGs/VisaLogo';
-import { MasterCardLogo } from '../SVGs/MasterCardLogo';
+import { VisaLogo } from '../../components/SVGs/VisaLogo';
+import { MasterCardLogo } from '../../components/SVGs/MasterCardLogo';
 // Material UI
 import Grid from '@mui/material/Grid';
 import { Typography } from '@material-ui/core';
@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Radio from '@mui/material/Radio';
 import Button from '@mui/material/Button';
 // Tools
-import useWindowDimension from '../hooks/useWindowDimension';
+import useWindowDimension from '../../components/hooks/useWindowDimension';
 
 export const Payment = () => {
 	const classes = {
@@ -215,6 +215,10 @@ export const Payment = () => {
 				sx={classes.container}
 				className='mb-120 md:mb-0'
 			>
+				{/**
+				 * Comment here for new design
+				 */}
+
 				<Grid item xs={12} className='p-30'>
 					<Typography className='text-16 font-medium text-color text-center md:text-left'>
 						Credit Card
@@ -249,8 +253,11 @@ export const Payment = () => {
 					className='p-30 py-20'
 					sx={{ background: '#FAFAFC' }}
 				>
-					<Typography className='text-color text-16 mb-4'>
+					{/* <Typography className='text-color text-16 mb-4'>
 						Kitco only accepts Master and Visa
+					</Typography> */}
+					<Typography className='text-color text-16 mb-4'>
+						We only accepts Master and Visa
 					</Typography>
 					<div className='flex items-center'>
 						<VisaLogo active={activeCard === 'visa'} className='mr-2' />

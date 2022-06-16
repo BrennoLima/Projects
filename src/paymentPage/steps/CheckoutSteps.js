@@ -16,6 +16,9 @@ export const CheckoutSteps = ({ activeStep, steps }) => {
 			className='md:p-10'
 		>
 			<Grid item xs={12} className='flex items-center'>
+				{/**
+				 * Comment here for new design
+				 */}
 				<Hidden mdDown>
 					<div className='stepper-number complete-stepper-number m-0'>
 						{activeStep + 1}

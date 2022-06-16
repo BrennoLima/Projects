@@ -1,15 +1,15 @@
 import React from 'react';
 // Components
-import { LogoWriting } from '../SVGs/LogoWriting';
-import { Logo } from '../SVGs/Logo';
-import { Lock } from '../SVGs/Lock';
+import { LogoWriting } from '../../components/SVGs/LogoWriting';
+import { Logo } from '../../components/SVGs/Logo';
+import { Lock } from '../../components/SVGs/Lock';
 
 // Material UI
 import Hidden from '@mui/material/Hidden';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import { Phone } from '../SVGs/Phone';
+import { Phone } from '../../components/SVGs/Phone';
 
 export const NavBar = () => {
 	const classes = {

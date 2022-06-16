@@ -84,6 +84,18 @@ body {
 .text-12 {
 	font-size: 12px !important;
 }
+.text-20 {
+	font-size: 20px !important;
+}
+.text-24 {
+	font-size: 24px !important;
+}
+.font-semibold {
+	font-weight: 500 !important;
+}
+.font-bold {
+	font-weight: 600 !important;
+}
 .long-text {
 	overflow: hidden !important;
 	white-space: nowrap !important;
@@ -91,4 +103,22 @@ body {
 }
 .mb-120 {
 	margin-bottom: 120px;
+}
+.mt-16 {
+	margin-top: 16px !important;
+}
+.font-8 {
+	font-size: 8px !important;
+}
+.mt-auto {
+	marign-top: auto !important;
+}
+.mb-auto {
+	marign-bottom: auto !important;
+}
+.items-start {
+	align-items: flex-start !important;
+}
+.md\:text-20 {
+	font-size: 20px !important;
 }
