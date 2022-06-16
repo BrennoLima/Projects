@@ -72,6 +72,7 @@ export const Landing = () => {
 			company: 'RBC',
 			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
 			background: '#005DAA',
+			route: '/mortgage-calculator',
 		},
 		{
 			name: 'Payment page',

@@ -5,6 +5,7 @@ import { Landing } from './landingPage/Landing';
 import { NavBar } from './navbar/NavBar';
 import { CreativeCard } from './creativeCard/CreativeCard';
 import { PaymentPage } from './paymentPage/PaymentPage';
+import { MortgageCalculator } from './mortgageCalculator/MortgageCalculator';
 
 export const App = () => {
 	return (
@@ -22,6 +23,7 @@ export const App = () => {
 					<Route path='/' element={<Landing />} />
 					<Route path='/creative-card' element={<CreativeCard />} />
 					<Route path='/payment-page' element={<PaymentPage />} />
+					<Route path='/mortgage-calculator' element={<MortgageCalculator />} />
 				</Routes>
 			</div>
 		</Router>
