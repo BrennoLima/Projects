@@ -85,9 +85,9 @@ export const PaymentDiagram = () => {
 			<Grid item xs={12} md={6}>
 				<Line options={options} data={data} />
 			</Grid>
-			<Grid item xs={12} md={6}>
+			{/* <Grid item xs={12} md={6}>
 				<Bar options={options2} data={data2} />
-			</Grid>
+			</Grid> */}
 		</Grid>
 	);
 };
