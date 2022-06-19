@@ -1,12 +1,8 @@
 import React from 'react';
-import clsx from 'clsx';
 // Material UI
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import MenuItem from '@mui/material/MenuItem';
-import Radio from '@mui/material/Radio';
-import Container from '@mui/material/Container';
 import InputAdornment from '@mui/material/InputAdornment';
 
 export const PaymentPlan = () => {
@@ -22,9 +18,13 @@ export const PaymentPlan = () => {
 		},
 		roundInput: {
 			width: '100%',
+			'& .MuiSelect-iconOutlined': {
+				color: '#c4c4cc',
+			},
 			'& .MuiOutlinedInput-root': {
 				borderRadius: '0.5rem',
 				color: '#c4c4cc',
+				background: '#00000033',
 				'& fieldset': {
 					borderColor: '#c4c4cc',
 				},

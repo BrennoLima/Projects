@@ -35,7 +35,9 @@ export const NavBar = () => {
 					justifyContent='center'
 				>
 					<Grid item className='flex items-center justify-center'>
-						<BLogo />
+						<Link sx={classes.navBtn} href={'/'}>
+							<BLogo />
+						</Link>
 					</Grid>
 					<Grid
 						item
