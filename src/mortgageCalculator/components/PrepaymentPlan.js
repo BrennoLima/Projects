@@ -4,8 +4,16 @@ import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import InputAdornment from '@mui/material/InputAdornment';
+import MenuItem from '@mui/material/MenuItem';
 
-export const PrepaymentPlan = () => {
+export const PrepaymentPlan = ({
+	prepaymentAmount,
+	setPrepaymentAmount,
+	prepaymentFrequency,
+	setPrepaymentFrequency,
+	startWithPayment,
+	setStartWithPayment,
+}) => {
 	const classes = {
 		container: {
 			border: '1px solid white',
@@ -21,6 +29,7 @@ export const PrepaymentPlan = () => {
 			'& .MuiSelect-iconOutlined': {
 				color: '#c4c4cc',
 			},
+
 			'& .MuiOutlinedInput-root': {
 				borderRadius: '0.5rem',
 				color: '#c4c4cc',
@@ -33,6 +42,10 @@ export const PrepaymentPlan = () => {
 				},
 				'&.Mui-focused fieldset': {
 					borderColor: '#c4c4cc',
+				},
+				'& .Mui-disabled': {
+					background: '#ffffff33',
+					borderRadius: '0.5rem',
 				},
 			},
 		},
@@ -81,11 +94,11 @@ export const PrepaymentPlan = () => {
 							sx={classes.roundInput}
 							size='small'
 							autoComplete='off'
-							// value={searchInput}
-							// onChange={(e) => setSearchInput(e.target.value)}
+							value={prepaymentAmount}
+							onChange={(e) => setPrepaymentAmount(e.target.value)}
 							InputProps={{
 								startAdornment: (
-									<InputAdornment className='pr-2'>
+									<InputAdornment position='start' className='pr-2'>
 										<i className='fas fa-dollar-sign' style={classes.white} />
 									</InputAdornment>
 								),
@@ -113,9 +126,8 @@ export const PrepaymentPlan = () => {
 							sx={classes.roundInput}
 							size='small'
 							autoComplete='off'
-							// value={searchInput}
-							// onChange={(e) => setSearchInput(e.target.value)}
-
+							value={prepaymentFrequency}
+							onChange={(e) => setPrepaymentFrequency(e.target.value)}
 							SelectProps={{
 								classes: { iconOutlined: { color: 'white !important' } },
 								MenuProps: {
@@ -123,7 +135,15 @@ export const PrepaymentPlan = () => {
 									style: { maxHeight: '250px' },
 								},
 							}}
-						/>
+						>
+							<MenuItem value={'One time'}>One time</MenuItem>
+							<MenuItem disabled value={'Each year'}>
+								Each year
+							</MenuItem>
+							<MenuItem disabled value={'Same as regular payment'}>
+								Same as regular payment
+							</MenuItem>
+						</TextField>
 					</Grid>
 				</Grid>
 				<Grid item xs={12} container className='flex items-center'>
@@ -148,13 +168,14 @@ export const PrepaymentPlan = () => {
 						justify='center'
 					>
 						<TextField
+							disabled
 							variant='outlined'
 							color='primary'
 							sx={classes.roundInput}
 							size='small'
 							autoComplete='off'
-							// value={searchInput}
-							// onChange={(e) => setSearchInput(e.target.value)}
+							value={startWithPayment}
+							onChange={(e) => setStartWithPayment(e.target.value)}
 						/>
 					</Grid>
 				</Grid>

@@ -1,17 +1,23 @@
 import React from 'react';
 // Material UI
 import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import InputAdornment from '@mui/material/InputAdornment';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
-export const CalculationTable = () => {
+export const CalculationTable = ({
+	paymentFrequency,
+	term,
+	amortization,
+	amout,
+	interest,
+	prepaymentAmount,
+	prepaymentFrequency,
+	startWithPayment,
+}) => {
 	const classes = {
 		container: {
 			border: '1px solid white',
@@ -61,18 +67,14 @@ export const CalculationTable = () => {
 									<span key='amout'>
 										<i className='fas fa-info-circle mr-2' />
 									</span>
-									{'row.calories'}
+									Number of Payments
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow>
@@ -81,18 +83,14 @@ export const CalculationTable = () => {
 									<span key='amout'>
 										<i className='fas fa-info-circle mr-2' />
 									</span>
-									{'row.calories'}
+									Mortgage Payment
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow sx={classes.darkRow}>
@@ -101,18 +99,14 @@ export const CalculationTable = () => {
 									<span key='amout'>
 										<i className='fas fa-info-circle mr-2' />
 									</span>
-									{'row.calories'}
+									Prepayment
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow>
@@ -121,18 +115,14 @@ export const CalculationTable = () => {
 									<span key='amout'>
 										<i className='fas fa-info-circle mr-2' />
 									</span>
-									{'row.calories'}
+									Principal Payments
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow sx={classes.darkRow}>
@@ -141,18 +131,14 @@ export const CalculationTable = () => {
 									<span key='amout'>
 										<i className='fas fa-info-circle mr-2' />
 									</span>
-									{'row.calories'}
+									Interest Payments
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow
@@ -163,18 +149,14 @@ export const CalculationTable = () => {
 									<span key='amout'>
 										<i className='fas fa-info-circle mr-2' />
 									</span>
-									{'row.calories'}
+									Total Cost
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}>
-									{'row.calories'}
-								</Typography>
+								<Typography sx={classes.tableWriting}></Typography>
 							</TableCell>
 						</TableRow>
 					</TableBody>
