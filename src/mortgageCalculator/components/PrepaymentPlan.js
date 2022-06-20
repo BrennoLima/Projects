@@ -63,7 +63,7 @@ export const PrepaymentPlan = ({
 		>
 			<Grid item xs={12} sx={classes.titleContainer}>
 				<Typography className='font-semibold text-16'>
-					Prepayment Plan
+					Prepayment Plan (Coming soon)
 				</Typography>
 			</Grid>
 			<Grid
