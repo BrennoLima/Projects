@@ -8,6 +8,7 @@ import {
 	Chart as ChartJS,
 	CategoryScale,
 	LinearScale,
+	BarElement,
 	PointElement,
 	LineElement,
 	Title,
@@ -15,9 +16,11 @@ import {
 	Legend,
 } from 'chart.js';
 import { Line, Bar } from 'react-chartjs-2';
+
 ChartJS.register(
 	CategoryScale,
 	LinearScale,
+	BarElement,
 	PointElement,
 	LineElement,
 	Title,
@@ -30,10 +33,26 @@ export const options = {
 	plugins: {
 		legend: {
 			position: 'top',
+			labels: {
+				color: '#e7e7e7',
+			},
 		},
 		title: {
 			display: true,
-			text: 'Chart.js Line Chart',
+			text: 'Payment History',
+			color: '#e7e7e7',
+		},
+	},
+	scales: {
+		x: {
+			ticks: {
+				color: '#e7e7e7',
+			},
+		},
+		y: {
+			ticks: {
+				color: '#e7e7e7',
+			},
 		},
 	},
 };
@@ -41,16 +60,28 @@ export const options2 = {
 	plugins: {
 		title: {
 			display: true,
-			text: 'Chart.js Bar Chart - Stacked',
+			text: 'Intereset Payment',
+			color: '#e7e7e7',
+		},
+		legend: {
+			labels: {
+				color: '#e7e7e7',
+			},
 		},
 	},
 	responsive: true,
 	scales: {
 		x: {
 			stacked: true,
+			ticks: {
+				color: '#e7e7e7',
+			},
 		},
 		y: {
 			stacked: true,
+			ticks: {
+				color: '#e7e7e7',
+			},
 		},
 	},
 };
@@ -60,34 +91,43 @@ export const PaymentDiagram = () => {
 		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
 		datasets: [
 			{
-				label: 'First dataset',
+				label: 'Regular Payments',
 				data: [33, 53, 85, 41, 44, 65],
 				fill: true,
-				backgroundColor: 'rgba(75,192,192,0.2)',
-				borderColor: 'rgba(75,192,192,1)',
+				backgroundColor: '#e7e7e780',
+				borderColor: '#e7e7e7',
 			},
 		],
 	};
 	const data2 = {
-		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+		labels: ['Regular Payments'],
 		datasets: [
 			{
+				stack: 'stack',
 				label: 'First dataset',
-				data: ['100', '200'],
+				data: [100],
 				fill: true,
-				backgroundColor: 'rgba(75,192,192,0.2)',
-				borderColor: 'rgba(75,192,192,1)',
+				backgroundColor: '#e7e7e7',
+				borderColor: '#e7e7e7',
+			},
+			{
+				stack: 'stack',
+				label: 'First dataset',
+				data: [200],
+				fill: true,
+				backgroundColor: '#e7e7e780',
+				borderColor: '#e7e7e780',
 			},
 		],
 	};
 	return (
-		<Grid container direction='row' alignItems='center' justify='center'>
+		<Grid container direction='row' alignItems='stretch' justify='center'>
 			<Grid item xs={12} md={6}>
 				<Line options={options} data={data} />
 			</Grid>
-			{/* <Grid item xs={12} md={6}>
+			<Grid item xs={12} md={6}>
 				<Bar options={options2} data={data2} />
-			</Grid> */}
+			</Grid>
 		</Grid>
 	);
 };

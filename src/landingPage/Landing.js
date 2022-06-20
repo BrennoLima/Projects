@@ -70,7 +70,7 @@ export const Landing = () => {
 			description:
 				'Mortgage calculator application. Based on Financial Cosumer Agency of Canada',
 			company: 'RBC',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			tags: '#chart.js #JavaScript #React #CSS #MaterialUI #GSAP',
 			background: '#005DAA',
 			route: '/mortgage-calculator',
 		},
@@ -79,7 +79,7 @@ export const Landing = () => {
 			description:
 				'Stepper payment page with form validation and responsive  design.',
 			company: 'Idea Theorem',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			tags: '#JavaScript #React #CSS #MaterialUI',
 			background: '#EF4829',
 			route: '/payment-page',
 		},
