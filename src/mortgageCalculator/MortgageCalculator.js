@@ -113,7 +113,7 @@ export const MortgageCalculator = () => {
 					<Typography className='white font-semibold text-20 pb-4'>
 						Mortgage Summary
 					</Typography>
-					<MortgageSummary amortization={amortization} />
+					<MortgageSummary amortization={amortization} term={term} />
 				</Grid>
 				<Grid item xs={12} className='pt-8'>
 					<Typography className='white font-semibold text-20 pb-4'>

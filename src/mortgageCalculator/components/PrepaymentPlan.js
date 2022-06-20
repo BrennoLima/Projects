@@ -89,6 +89,7 @@ export const PrepaymentPlan = ({
 					</Grid>
 					<Grid item xs={12} md={7}>
 						<TextField
+							disabled
 							variant='outlined'
 							color='primary'
 							sx={classes.roundInput}
@@ -96,13 +97,13 @@ export const PrepaymentPlan = ({
 							autoComplete='off'
 							value={prepaymentAmount}
 							onChange={(e) => setPrepaymentAmount(e.target.value)}
-							InputProps={{
-								startAdornment: (
-									<InputAdornment position='start' className='pr-2'>
-										<i className='fas fa-dollar-sign' style={classes.white} />
-									</InputAdornment>
-								),
-							}}
+							// InputProps={{
+							// 	startAdornment: (
+							// 		<InputAdornment position='start' className='pr-2'>
+							// 			<i className='fas fa-dollar-sign' style={classes.white} />
+							// 		</InputAdornment>
+							// 	),
+							// }}
 						/>
 					</Grid>
 				</Grid>
@@ -120,6 +121,7 @@ export const PrepaymentPlan = ({
 					</Grid>
 					<Grid item xs={12} md={7}>
 						<TextField
+							disabled
 							select
 							variant='outlined'
 							color='primary'

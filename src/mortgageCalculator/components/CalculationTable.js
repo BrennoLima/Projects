@@ -70,11 +70,22 @@ export const CalculationTable = ({
 									Number of Payments
 								</Typography>
 							</TableCell>
+							{/**
+							 * Simplified term to only -> 5 Years
+							 * Simplified payment frequency to only -> Monthly (12x per year)
+							 * Simplified amortization to only -> 25 Years
+							 */}
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									{/* frequency*term */}
+									{12 * parseInt(term.replace(' Years', ''))}
+								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									{/* frequency*amortization */}
+									{12 * parseInt(amortization.years.replace(' Year', ''))}
+								</Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow>
@@ -94,6 +105,9 @@ export const CalculationTable = ({
 							</TableCell>
 						</TableRow>
 						<TableRow sx={classes.darkRow}>
+							{/**
+							 * Prepayment is disabled to simplify
+							 */}
 							<TableCell>
 								<Typography sx={classes.tableWriting}>
 									<span key='amout'>
@@ -103,10 +117,10 @@ export const CalculationTable = ({
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>$0.00</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>$0.00</Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow>
