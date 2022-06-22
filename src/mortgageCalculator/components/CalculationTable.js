@@ -9,14 +9,16 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 
 export const CalculationTable = ({
-	paymentFrequency,
-	term,
-	amortization,
-	amout,
-	interest,
-	prepaymentAmount,
-	prepaymentFrequency,
-	startWithPayment,
+	monthlyPayment,
+	totalNumberOfPayments,
+	totalInterest,
+	paymentsPerTerm,
+	termMortgageCost,
+	totalMortageCost,
+	termInterest,
+	totalPaidPrincipalByTerm,
+	totalPaidInterestByTerm,
+	amount,
 }) => {
 	const classes = {
 		container: {
@@ -70,21 +72,14 @@ export const CalculationTable = ({
 									Number of Payments
 								</Typography>
 							</TableCell>
-							{/**
-							 * Simplified term to only -> 5 Years
-							 * Simplified payment frequency to only -> Monthly (12x per year)
-							 * Simplified amortization to only -> 25 Years
-							 */}
 							<TableCell sx={classes.borderLeft}>
 								<Typography sx={classes.tableWriting}>
-									{/* frequency*term */}
-									{12 * parseInt(term.replace(' Years', ''))}
+									{paymentsPerTerm}
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
 								<Typography sx={classes.tableWriting}>
-									{/* frequency*amortization */}
-									{12 * parseInt(amortization.years.replace(' Year', ''))}
+									{totalNumberOfPayments}
 								</Typography>
 							</TableCell>
 						</TableRow>
@@ -98,10 +93,20 @@ export const CalculationTable = ({
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									$
+									{new Intl.NumberFormat('en-US').format(
+										monthlyPayment.toFixed(2)
+									)}
+								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									$
+									{new Intl.NumberFormat('en-US').format(
+										monthlyPayment.toFixed(2)
+									)}
+								</Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow sx={classes.darkRow}>
@@ -133,10 +138,17 @@ export const CalculationTable = ({
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									$
+									{new Intl.NumberFormat('en-US').format(
+										totalPaidPrincipalByTerm.toFixed(2)
+									)}
+								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									${new Intl.NumberFormat('en-US').format(amount.toFixed(2))}
+								</Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow sx={classes.darkRow}>
@@ -149,10 +161,20 @@ export const CalculationTable = ({
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									$
+									{new Intl.NumberFormat('en-US').format(
+										totalPaidInterestByTerm.toFixed(2)
+									)}
+								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									$
+									{new Intl.NumberFormat('en-US').format(
+										totalInterest.toFixed(2)
+									)}
+								</Typography>
 							</TableCell>
 						</TableRow>
 						<TableRow
@@ -167,10 +189,20 @@ export const CalculationTable = ({
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									$
+									{new Intl.NumberFormat('en-US').format(
+										termMortgageCost.toFixed(2)
+									)}
+								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
-								<Typography sx={classes.tableWriting}></Typography>
+								<Typography sx={classes.tableWriting}>
+									$
+									{new Intl.NumberFormat('en-US').format(
+										totalMortageCost.toFixed(2)
+									)}
+								</Typography>
 							</TableCell>
 						</TableRow>
 					</TableBody>

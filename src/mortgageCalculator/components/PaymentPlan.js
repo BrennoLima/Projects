@@ -7,8 +7,8 @@ import InputAdornment from '@mui/material/InputAdornment';
 import MenuItem from '@mui/material/MenuItem';
 
 export const PaymentPlan = ({
-	amout,
-	setAmout,
+	amount,
+	setAmount,
 	interest,
 	setInterest,
 	amortization,
@@ -78,7 +78,7 @@ export const PaymentPlan = ({
 							className='font-semibold text-16 flex items-center'
 							sx={classes.white}
 						>
-							<span key='amout'>
+							<span key='amount'>
 								<i className='fas fa-info-circle mr-2' />
 							</span>
 							Mortgage Amount:
@@ -91,8 +91,8 @@ export const PaymentPlan = ({
 							sx={classes.roundInput}
 							size='small'
 							autoComplete='off'
-							value={amout}
-							onChange={(e) => setAmout(e.target.value)}
+							value={amount}
+							onChange={(e) => setAmount(e.target.value)}
 							InputProps={{
 								startAdornment: (
 									<InputAdornment position='start' className='pr-2'>
@@ -109,7 +109,7 @@ export const PaymentPlan = ({
 							className='font-semibold text-16 flex items-center'
 							sx={classes.white}
 						>
-							<span key='amout'>
+							<span key='amount'>
 								<i className='fas fa-info-circle mr-2' />
 							</span>
 							Interest Rate:
@@ -140,7 +140,7 @@ export const PaymentPlan = ({
 							className='font-semibold text-16 flex items-center'
 							sx={classes.white}
 						>
-							<span key='amout'>
+							<span key='amount'>
 								<i className='fas fa-info-circle mr-2' />
 							</span>
 							Amortization Period:
@@ -175,94 +175,36 @@ export const PaymentPlan = ({
 									},
 								}}
 							>
-								<MenuItem disabled value={'1 Year'}>
-									1 Year
-								</MenuItem>
-								<MenuItem disabled value={'2 Years'}>
-									2 Years
-								</MenuItem>
-								<MenuItem disabled value={'3 Years'}>
-									3 Years
-								</MenuItem>
-								<MenuItem disabled value={'4 Years'}>
-									4 Years
-								</MenuItem>
-								<MenuItem disabled value={'5 Years'}>
-									5 Years
-								</MenuItem>
-								<MenuItem disabled value={'6 Years'}>
-									6 Years
-								</MenuItem>
-								<MenuItem disabled value={'7 Years'}>
-									7 Years
-								</MenuItem>
-								<MenuItem disabled value={'8 Years'}>
-									8 Years
-								</MenuItem>
-								<MenuItem disabled value={'9 Years'}>
-									9 Years
-								</MenuItem>
-								<MenuItem disabled value={'10 Years'}>
-									10 Years
-								</MenuItem>
-								<MenuItem disabled value={'11 Year'}>
-									11 Year
-								</MenuItem>
-								<MenuItem disabled value={'12 Years'}>
-									12 Years
-								</MenuItem>
-								<MenuItem disabled value={'13 Years'}>
-									13 Years
-								</MenuItem>
-								<MenuItem disabled value={'14 Years'}>
-									14 Years
-								</MenuItem>
-								<MenuItem disabled value={'15 Years'}>
-									15 Years
-								</MenuItem>
-								<MenuItem disabled value={'16 Years'}>
-									16 Years
-								</MenuItem>
-								<MenuItem disabled value={'17 Years'}>
-									17 Years
-								</MenuItem>
-								<MenuItem disabled value={'18 Years'}>
-									18 Years
-								</MenuItem>
-								<MenuItem disabled value={'19 Years'}>
-									19 Years
-								</MenuItem>
-								<MenuItem disabled value={'20 Years'}>
-									20 Years
-								</MenuItem>
-								<MenuItem disabled value={'21 Year'}>
-									21 Year
-								</MenuItem>
-								<MenuItem disabled value={'22 Years'}>
-									22 Years
-								</MenuItem>
-								<MenuItem disabled value={'23 Years'}>
-									23 Years
-								</MenuItem>
-								<MenuItem disabled value={'24 Years'}>
-									24 Years
-								</MenuItem>
-								<MenuItem value={'25 Years'}>25 Years</MenuItem>
-								<MenuItem disabled value={'26 Years'}>
-									26 Years
-								</MenuItem>
-								<MenuItem disabled value={'27 Years'}>
-									27 Years
-								</MenuItem>
-								<MenuItem disabled value={'28 Years'}>
-									28 Years
-								</MenuItem>
-								<MenuItem disabled value={'29 Years'}>
-									29 Years
-								</MenuItem>
-								<MenuItem disabled value={'30 Years'}>
-									30 Years
-								</MenuItem>
+								<MenuItem value={1}>1 Year</MenuItem>
+								<MenuItem value={2}>2 Years</MenuItem>
+								<MenuItem value={3}>3 Years</MenuItem>
+								<MenuItem value={4}>4 Years</MenuItem>
+								<MenuItem value={5}>5 Years</MenuItem>
+								<MenuItem value={6}>6 Years</MenuItem>
+								<MenuItem value={7}>7 Years</MenuItem>
+								<MenuItem value={8}>8 Years</MenuItem>
+								<MenuItem value={9}>9 Years</MenuItem>
+								<MenuItem value={10}>10 Years</MenuItem>
+								<MenuItem value={11}>11 Year</MenuItem>
+								<MenuItem value={12}>12 Years</MenuItem>
+								<MenuItem value={13}>13 Years</MenuItem>
+								<MenuItem value={14}>14 Years</MenuItem>
+								<MenuItem value={15}>15 Years</MenuItem>
+								<MenuItem value={16}>16 Years</MenuItem>
+								<MenuItem value={17}>17 Years</MenuItem>
+								<MenuItem value={18}>18 Years</MenuItem>
+								<MenuItem value={19}>19 Years</MenuItem>
+								<MenuItem value={20}>20 Years</MenuItem>
+								<MenuItem value={21}>21 Year</MenuItem>
+								<MenuItem value={22}>22 Years</MenuItem>
+								<MenuItem value={23}>23 Years</MenuItem>
+								<MenuItem value={24}>24 Years</MenuItem>
+								<MenuItem value={25}>25 Years</MenuItem>
+								<MenuItem value={26}>26 Years</MenuItem>
+								<MenuItem value={27}>27 Years</MenuItem>
+								<MenuItem value={28}>28 Years</MenuItem>
+								<MenuItem value={29}>29 Years</MenuItem>
+								<MenuItem value={30}>30 Years</MenuItem>
 							</TextField>
 						</Grid>
 						<Grid item xs={12} md={6} className='pt-2 md:pt-0 '>
@@ -285,39 +227,18 @@ export const PaymentPlan = ({
 									},
 								}}
 							>
-								<MenuItem disabled value={'1 Month'}>
-									1 Month
-								</MenuItem>
-								<MenuItem disabled value={'2 Months'}>
-									2 Months
-								</MenuItem>
-								<MenuItem disabled value={'3 Months'}>
-									3 Months
-								</MenuItem>
-								<MenuItem disabled value={'4 Months'}>
-									4 Months
-								</MenuItem>
-								<MenuItem disabled value={'5 Months'}>
-									5 Months
-								</MenuItem>
-								<MenuItem disabled value={'6 Months'}>
-									6 Months
-								</MenuItem>
-								<MenuItem disabled value={'7 Months'}>
-									7 Months
-								</MenuItem>
-								<MenuItem disabled value={'8 Months'}>
-									8 Months
-								</MenuItem>
-								<MenuItem disabled value={'9 Months'}>
-									9 Months
-								</MenuItem>
-								<MenuItem disabled value={'10 Months'}>
-									10 Months
-								</MenuItem>
-								<MenuItem disabled value={'11 Months'}>
-									11 Months
-								</MenuItem>
+								<MenuItem value={0}>-</MenuItem>
+								<MenuItem value={1}>1 Month</MenuItem>
+								<MenuItem value={2}>2 Months</MenuItem>
+								<MenuItem value={3}>3 Months</MenuItem>
+								<MenuItem value={4}>4 Months</MenuItem>
+								<MenuItem value={5}>5 Months</MenuItem>
+								<MenuItem value={6}>6 Months</MenuItem>
+								<MenuItem value={7}>7 Months</MenuItem>
+								<MenuItem value={8}>8 Months</MenuItem>
+								<MenuItem value={9}>9 Months</MenuItem>
+								<MenuItem value={10}>10 Months</MenuItem>
+								<MenuItem value={11}>11 Months</MenuItem>
 							</TextField>
 						</Grid>
 					</Grid>
@@ -328,7 +249,7 @@ export const PaymentPlan = ({
 							className='font-semibold text-16 flex items-center'
 							sx={classes.white}
 						>
-							<span key='amout'>
+							<span key='amount'>
 								<i className='fas fa-info-circle mr-2' />
 							</span>
 							Payment Frequency:
@@ -379,7 +300,7 @@ export const PaymentPlan = ({
 							className='font-semibold text-16 flex items-center'
 							sx={classes.white}
 						>
-							<span key='amout'>
+							<span key='amount'>
 								<i className='fas fa-info-circle mr-2' />
 							</span>
 							Term:
@@ -403,34 +324,16 @@ export const PaymentPlan = ({
 								},
 							}}
 						>
-							<MenuItem disabled value={'1 Year'}>
-								1 Year
-							</MenuItem>
-							<MenuItem disabled value={'2 Years'}>
-								2 Years
-							</MenuItem>
-							<MenuItem disabled value={'3 Years'}>
-								3 Years
-							</MenuItem>
-							<MenuItem disabled value={'4 Years'}>
-								4 Years
-							</MenuItem>
-							<MenuItem value={'5 Years'}>5 Years</MenuItem>
-							<MenuItem disabled value={'6 Years'}>
-								6 Years
-							</MenuItem>
-							<MenuItem disabled value={'7 Years'}>
-								7 Years
-							</MenuItem>
-							<MenuItem disabled value={'8 Years'}>
-								8 Years
-							</MenuItem>
-							<MenuItem disabled value={'9 Years'}>
-								9 Years
-							</MenuItem>
-							<MenuItem disabled value={'10 Years'}>
-								10 Years
-							</MenuItem>
+							<MenuItem value={1}>1 Year</MenuItem>
+							<MenuItem value={2}>2 Years</MenuItem>
+							<MenuItem value={3}>3 Years</MenuItem>
+							<MenuItem value={4}>4 Years</MenuItem>
+							<MenuItem value={5}>5 Years</MenuItem>
+							<MenuItem value={6}>6 Years</MenuItem>
+							<MenuItem value={7}>7 Years</MenuItem>
+							<MenuItem value={8}>8 Years</MenuItem>
+							<MenuItem value={9}>9 Years</MenuItem>
+							<MenuItem value={10}>10 Years</MenuItem>
 						</TextField>
 					</Grid>
 				</Grid>

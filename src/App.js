@@ -6,6 +6,7 @@ import { NavBar } from './navbar/NavBar';
 import { CreativeCard } from './creativeCard/CreativeCard';
 import { PaymentPage } from './paymentPage/PaymentPage';
 import { MortgageCalculator } from './mortgageCalculator/MortgageCalculator';
+import { NFTsGalery } from './nftsGalery/NFTsGalery';
 
 export const App = () => {
 	return (
@@ -24,6 +25,7 @@ export const App = () => {
 					<Route path='/creative-card' element={<CreativeCard />} />
 					<Route path='/payment-page' element={<PaymentPage />} />
 					<Route path='/mortgage-calculator' element={<MortgageCalculator />} />
+					<Route path='/nfts-galery' element={<NFTsGalery />} />
 				</Routes>
 			</div>
 		</Router>
