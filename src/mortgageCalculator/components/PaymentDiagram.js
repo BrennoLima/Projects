@@ -1,8 +1,6 @@
 import React from 'react';
 // Material UI
 import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 // chart.js
 import {
 	Chart as ChartJS,
@@ -86,7 +84,7 @@ export const options2 = {
 	},
 };
 
-export const PaymentDiagram = () => {
+export const PaymentDiagram = ({ totalMortageCost, amount }) => {
 	const data = {
 		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
 		datasets: [
@@ -104,16 +102,16 @@ export const PaymentDiagram = () => {
 		datasets: [
 			{
 				stack: 'stack',
-				label: 'First dataset',
-				data: [100],
+				label: 'Principal Payments',
+				data: [amount],
 				fill: true,
 				backgroundColor: '#e7e7e7',
 				borderColor: '#e7e7e7',
 			},
 			{
 				stack: 'stack',
-				label: 'First dataset',
-				data: [200],
+				label: 'Interest Payment',
+				data: [totalMortageCost - amount],
 				fill: true,
 				backgroundColor: '#e7e7e780',
 				borderColor: '#e7e7e780',

@@ -17,10 +17,10 @@ export const MortgageCalculator = () => {
 	const paymentPlanRef = useRef(null);
 	////////////////// State/Control ////////////////////
 	// Payment plan data
-	const [amount, setAmount] = useState(300000);
+	const [amount, setAmount] = useState(100000);
 	const [interest, setInterest] = useState(5);
 	const [amortization, setAmortization] = useState({
-		years: 30,
+		years: 25,
 		months: 0,
 	});
 	const [paymentFrequency, setPaymentFrequency] = useState(
@@ -202,7 +202,7 @@ export const MortgageCalculator = () => {
 					<Typography className='white font-semibold text-20 pb-4'>
 						Payment Diagram
 					</Typography>
-					<PaymentDiagram />
+					<PaymentDiagram totalMortageCost={totalMortageCost} amount={amount} />
 				</Grid>
 			</Grid>
 		</Container>

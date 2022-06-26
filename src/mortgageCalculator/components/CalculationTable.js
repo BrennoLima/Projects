@@ -15,7 +15,6 @@ export const CalculationTable = ({
 	paymentsPerTerm,
 	termMortgageCost,
 	totalMortageCost,
-	termInterest,
 	totalPaidPrincipalByTerm,
 	totalPaidInterestByTerm,
 	amount,
@@ -96,7 +95,7 @@ export const CalculationTable = ({
 								<Typography sx={classes.tableWriting}>
 									$
 									{new Intl.NumberFormat('en-US').format(
-										monthlyPayment.toFixed(2)
+										Number(monthlyPayment).toFixed(2)
 									)}
 								</Typography>
 							</TableCell>
@@ -104,7 +103,7 @@ export const CalculationTable = ({
 								<Typography sx={classes.tableWriting}>
 									$
 									{new Intl.NumberFormat('en-US').format(
-										monthlyPayment.toFixed(2)
+										Number(monthlyPayment).toFixed(2)
 									)}
 								</Typography>
 							</TableCell>
@@ -141,13 +140,16 @@ export const CalculationTable = ({
 								<Typography sx={classes.tableWriting}>
 									$
 									{new Intl.NumberFormat('en-US').format(
-										totalPaidPrincipalByTerm.toFixed(2)
+										Number(totalPaidPrincipalByTerm).toFixed(2)
 									)}
 								</Typography>
 							</TableCell>
 							<TableCell sx={classes.borderLeft}>
 								<Typography sx={classes.tableWriting}>
-									${new Intl.NumberFormat('en-US').format(amount.toFixed(2))}
+									$
+									{new Intl.NumberFormat('en-US').format(
+										Number(amount).toFixed(2)
+									)}
 								</Typography>
 							</TableCell>
 						</TableRow>
@@ -164,7 +166,7 @@ export const CalculationTable = ({
 								<Typography sx={classes.tableWriting}>
 									$
 									{new Intl.NumberFormat('en-US').format(
-										totalPaidInterestByTerm.toFixed(2)
+										Number(totalPaidInterestByTerm).toFixed(2)
 									)}
 								</Typography>
 							</TableCell>
@@ -172,7 +174,7 @@ export const CalculationTable = ({
 								<Typography sx={classes.tableWriting}>
 									$
 									{new Intl.NumberFormat('en-US').format(
-										totalInterest.toFixed(2)
+										Number(totalInterest).toFixed(2)
 									)}
 								</Typography>
 							</TableCell>
@@ -192,7 +194,7 @@ export const CalculationTable = ({
 								<Typography sx={classes.tableWriting}>
 									$
 									{new Intl.NumberFormat('en-US').format(
-										termMortgageCost.toFixed(2)
+										Number(termMortgageCost).toFixed(2)
 									)}
 								</Typography>
 							</TableCell>
@@ -200,7 +202,7 @@ export const CalculationTable = ({
 								<Typography sx={classes.tableWriting}>
 									$
 									{new Intl.NumberFormat('en-US').format(
-										totalMortageCost.toFixed(2)
+										Number(totalMortageCost).toFixed(2)
 									)}
 								</Typography>
 							</TableCell>

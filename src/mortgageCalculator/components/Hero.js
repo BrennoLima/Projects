@@ -41,7 +41,7 @@ export const Hero = ({ paymentPlanRef }) => {
 						Mortgage Payment Calculator
 					</Typography>
 					<Typography className='semiWhite font-normal text-16'>
-						Quickly See What Your Mortgage Payments Might Look Like
+						Quickly wee what your mortgage payments might look like
 					</Typography>
 					<Button sx={classes.startBtn} size='small' onClick={start}>
 						Start now
