@@ -198,12 +198,16 @@ export const MortgageCalculator = () => {
 						outstandingPrincipal={outstandingPrincipal}
 					/>
 				</Grid>
-				<Grid item xs={12} className='pt-8'>
+				{/* <Grid item xs={12} className='pt-8'>
 					<Typography className='white font-semibold text-20 pb-4'>
 						Payment Diagram
 					</Typography>
-					<PaymentDiagram totalMortageCost={totalMortageCost} amount={amount} />
-				</Grid>
+					<PaymentDiagram
+						totalMortageCost={totalMortageCost}
+						amount={amount}
+						totalNumberOfPayments={totalNumberOfPayments}
+					/>
+				</Grid> */}
 			</Grid>
 		</Container>
 	);

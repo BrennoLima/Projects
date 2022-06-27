@@ -43,11 +43,17 @@ export const options = {
 	},
 	scales: {
 		x: {
+			grid: {
+				color: '#e7e7e780',
+			},
 			ticks: {
 				color: '#e7e7e7',
 			},
 		},
 		y: {
+			grid: {
+				color: '#e7e7e780',
+			},
 			ticks: {
 				color: '#e7e7e7',
 			},
@@ -70,12 +76,18 @@ export const options2 = {
 	responsive: true,
 	scales: {
 		x: {
+			grid: {
+				color: '#e7e7e780',
+			},
 			stacked: true,
 			ticks: {
 				color: '#e7e7e7',
 			},
 		},
 		y: {
+			grid: {
+				color: '#e7e7e780',
+			},
 			stacked: true,
 			ticks: {
 				color: '#e7e7e7',
@@ -84,7 +96,11 @@ export const options2 = {
 	},
 };
 
-export const PaymentDiagram = ({ totalMortageCost, amount }) => {
+export const PaymentDiagram = ({
+	totalMortageCost,
+	amount,
+	totalNumberOfPayments,
+}) => {
 	const data = {
 		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
 		datasets: [
