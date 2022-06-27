@@ -99,14 +99,15 @@ export const options2 = {
 export const PaymentDiagram = ({
 	totalMortageCost,
 	amount,
-	totalNumberOfPayments,
+	paymentLabels,
+	paymentData,
 }) => {
 	const data = {
-		labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+		labels: paymentLabels,
 		datasets: [
 			{
 				label: 'Regular Payments',
-				data: [33, 53, 85, 41, 44, 65],
+				data: paymentData,
 				fill: true,
 				backgroundColor: '#e7e7e780',
 				borderColor: '#e7e7e7',

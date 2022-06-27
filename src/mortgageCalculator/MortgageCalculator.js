@@ -42,6 +42,9 @@ export const MortgageCalculator = () => {
 	const [totalPaidPrincipalByTerm, setTotalPaidPrincipalByTerm] = useState(0);
 	const [totalPaidInterestByTerm, setTotalPaidInterestByTerm] = useState(0);
 	const [outstandingPrincipal, setOutstandingPrincipal] = useState(0);
+	// graph
+	const [paymentLabels, setPaymentLabels] = useState([]);
+	const [paymentData, setPaymentData] = useState([]);
 
 	useEffect(() => {
 		// monthly intereset rate =  interest% / 12
@@ -198,16 +201,17 @@ export const MortgageCalculator = () => {
 						outstandingPrincipal={outstandingPrincipal}
 					/>
 				</Grid>
-				{/* <Grid item xs={12} className='pt-8'>
+				<Grid item xs={12} className='pt-8'>
 					<Typography className='white font-semibold text-20 pb-4'>
 						Payment Diagram
 					</Typography>
 					<PaymentDiagram
 						totalMortageCost={totalMortageCost}
 						amount={amount}
-						totalNumberOfPayments={totalNumberOfPayments}
+						paymentLabels={paymentLabels}
+						paymentData={paymentData}
 					/>
-				</Grid> */}
+				</Grid>
 			</Grid>
 		</Container>
 	);
