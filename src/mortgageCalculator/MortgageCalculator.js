@@ -83,6 +83,24 @@ export const MortgageCalculator = () => {
 			totalPaidInterest = totalPaidInterest + paidInterest;
 			totalPaidPrincipal = totalPaidPrincipal + paidPrincipal;
 		}
+		// graph
+		let aux = totalNumberOfPayments / 6;
+		let paymentLabels = [0, aux, aux * 2, aux * 3, aux * 4, aux * 5, aux * 6];
+		let paymentData = [amount];
+		outstandingPrincipal = amount;
+		paidPrincipal = 0;
+		paidInterest = 0;
+		totalPaidInterest = 0;
+		totalPaidPrincipal = 0;
+		for (let count = 1; count <= totalNumberOfPayments; count++) {
+			paidInterest = monthlyInterestRate * outstandingPrincipal;
+			paidPrincipal = monthlyPayment - paidInterest;
+			outstandingPrincipal = outstandingPrincipal - paidPrincipal;
+			totalPaidInterest = totalPaidInterest + paidInterest;
+			totalPaidPrincipal = totalPaidPrincipal + paidPrincipal;
+			if (paymentLabels.includes(count))
+				paymentData.push(outstandingPrincipal > 0 ? outstandingPrincipal : 0);
+		}
 		// set state
 		setTotalNumberOfPayments(totalNumberOfPayments);
 		setOutstandingPrincipal(outstandingPrincipal);
@@ -94,6 +112,8 @@ export const MortgageCalculator = () => {
 		setTotalMortageCost(totalMortageCost);
 		setTermInterest(termInterest);
 		setTotalInterest(totalInterest);
+		setPaymentLabels(paymentLabels);
+		setPaymentData(paymentData);
 	}, [interest, amount, term, amortization]);
 
 	/////////////////////////////////////////////////////
