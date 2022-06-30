@@ -322,7 +322,7 @@ export const Payment = () => {
 					container
 					direction='row'
 					alignItems='stretch'
-					justify='center'
+					justifyContent='center'
 					className='px-30'
 				>
 					{/**

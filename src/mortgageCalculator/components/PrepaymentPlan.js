@@ -3,7 +3,6 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import InputAdornment from '@mui/material/InputAdornment';
 import MenuItem from '@mui/material/MenuItem';
 
 export const PrepaymentPlan = ({
@@ -167,7 +166,7 @@ export const PrepaymentPlan = ({
 						container
 						direction='row'
 						alignItems='center'
-						justify='center'
+						justifyContent='center'
 					>
 						<TextField
 							disabled

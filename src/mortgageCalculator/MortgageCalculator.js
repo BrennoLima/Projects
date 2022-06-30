@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Components
 import { PaymentPlan } from './components/PaymentPlan';
 import { PrepaymentPlan } from './components/PrepaymentPlan';
@@ -11,7 +11,6 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import { useEffect } from 'react';
 
 export const MortgageCalculator = () => {
 	const paymentPlanRef = useRef(null);
@@ -124,7 +123,7 @@ export const MortgageCalculator = () => {
 				container
 				direction='row'
 				alignItems='stretch'
-				justify='center'
+				justifyContent='center'
 				className='pt-16 pb-16'
 			>
 				{/**

@@ -316,7 +316,7 @@ export const CreativeCard = () => {
 								container
 								direction='row'
 								alignItems='stretch'
-								justify='center'
+								justifyContent='center'
 							>
 								{/**
 								 * Month

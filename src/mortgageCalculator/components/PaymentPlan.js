@@ -153,7 +153,7 @@ export const PaymentPlan = ({
 						container
 						direction='row'
 						alignItems='center'
-						justify='center'
+						justifyContent='center'
 					>
 						<Grid item xs={12} md={6} className='p-0 md:pr-2'>
 							<TextField

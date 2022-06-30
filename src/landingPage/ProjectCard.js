@@ -50,7 +50,11 @@ export const ProjectCard = ({ project }) => {
 			<Grid item xs={12} sx={{ paddingBottom: '16px' }}>
 				<Typography sx={classes.name}>{project.name}</Typography>
 			</Grid>
-			<Grid item xs={12} sx={{ paddingBottom: '16px' }}>
+			<Grid
+				item
+				xs={12}
+				sx={{ paddingBottom: '16px', height: '58px', overflowY: 'auto' }}
+			>
 				<Typography sx={classes.description}>{project.description}</Typography>
 			</Grid>
 			<Grid item xs={12} className='pb-8'>

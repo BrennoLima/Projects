@@ -29,7 +29,12 @@ export const Hero = ({ paymentPlanRef }) => {
 	};
 
 	return (
-		<Grid container direction='row' alignItems='stretch' justify='center'>
+		<Grid
+			container
+			direction='row'
+			alignItems='stretch'
+			justifyContent='center'
+		>
 			<Grid
 				item
 				xs={12}

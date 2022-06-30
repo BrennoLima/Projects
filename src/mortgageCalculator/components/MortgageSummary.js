@@ -16,7 +16,12 @@ export const MortgageSummary = ({
 	outstandingPrincipal,
 }) => {
 	return (
-		<Grid container direction='row' alignItems='stretch' justify='center'>
+		<Grid
+			container
+			direction='row'
+			alignItems='stretch'
+			justifyContent='center'
+		>
 			<Grid item xs={12}>
 				<Typography className='semiWhite pb-8'>
 					Over the <b className='white'>{totalNumberOfPayments}</b> amortization

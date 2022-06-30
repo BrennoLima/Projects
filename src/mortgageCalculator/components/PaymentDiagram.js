@@ -136,7 +136,12 @@ export const PaymentDiagram = ({
 		],
 	};
 	return (
-		<Grid container direction='row' alignItems='stretch' justify='center'>
+		<Grid
+			container
+			direction='row'
+			alignItems='stretch'
+			justifyContent='center'
+		>
 			<Grid item xs={12} md={6}>
 				<Line options={options} data={data} />
 			</Grid>

@@ -68,16 +68,16 @@ export const Landing = () => {
 		{
 			name: 'Mortgage calculator',
 			description:
-				'Mortgage calculator application. Based on Financial Cosumer Agency of Canada',
+				'Mortgage calculator application with graphs and animations.',
 			company: 'RBC',
-			tags: '#chart.js #JavaScript #React #CSS #MaterialUI #GSAP',
+			tags: '#chart.js #JavaScript #React #CSS #MaterialUI',
 			background: '#005DAA',
 			route: '/mortgage-calculator',
 		},
 		{
 			name: 'Payment page',
 			description:
-				'Stepper payment page with form validation and responsive  design.',
+				'Stepper payment page with form validation and responsive design.',
 			company: 'Idea Theorem',
 			tags: '#JavaScript #React #CSS #MaterialUI',
 			background: '#EF4829',
@@ -85,14 +85,22 @@ export const Landing = () => {
 		},
 		{
 			name: 'Animated payment page',
-			description: 'Payment page with a creative design and animations',
+			description: 'Payment page with a creative design and animations.',
 			company: 'Own project',
 			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
 			background: '#1D8321',
 			route: '/creative-card',
 		},
+		{
+			name: 'NFTs galery',
+			description: 'A place to display my NFTs, fetching the OpenSea API.',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP #WEB3',
+			background: '#d86a1f',
+			route: '/nfts-galery',
+		},
 	]);
-	const [onDisplayProjects, setOnDisplayProjects] = useState([{}]);
+	// const [onDisplayProjects, setOnDisplayProjects] = useState([{}]);
 	//////////////////////////////////////
 
 	return (
