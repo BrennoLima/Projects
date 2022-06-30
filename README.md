@@ -1,1 +1,1 @@
-https://main.d3hkr4yx7gdc6x.amplifyapp.com
+https://main.d2b35kk5cgiv9g.amplifyapp.com
