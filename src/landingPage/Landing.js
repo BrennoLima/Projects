@@ -99,6 +99,14 @@ export const Landing = () => {
 			background: '#d86a1f',
 			route: '/nfts-galery',
 		},
+		{
+			name: 'Old Bank Cafe',
+			description: 'Landing page for Old Bank Cafe',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP #SCROLLTRIGGER',
+			background: '#c9a200',
+			route: '/old-bank',
+		},
 	]);
 	// const [onDisplayProjects, setOnDisplayProjects] = useState([{}]);
 	//////////////////////////////////////
