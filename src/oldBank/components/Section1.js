@@ -5,12 +5,15 @@ import { Logo } from '../../components/SVGs/old-bank-cafe/Logo';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+// hooks
+import useWindowDimensions from '../../components/hooks/useWindowDimension';
 // Gsap
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export const Section1 = () => {
+	const { width } = useWindowDimensions();
 	const classes = {
 		container: {
 			height: '100vh',
@@ -30,12 +33,12 @@ export const Section1 = () => {
 		},
 		title: {
 			fontFamily: 'Gentium Book Plus',
-			fontSize: '2.5rem',
+			fontSize: width > 768 ? '2.5rem' : '1.5rem',
 			fontWeight: 'bold',
 			opacity: 0.9,
 		},
 		subtitle: {
-			fontSize: '1.2rem',
+			fontSize: width > 768 ? '1.2rem' : '1rem',
 			fontWeight: 'normal',
 			opacity: 0.8,
 			fontFamily: 'Gentium Book Plus',
@@ -61,7 +64,7 @@ export const Section1 = () => {
 			boxShadow: '1px 2px 5px rgba(0,0,0,0.15)',
 		}).to('.navBtn', {
 			color: '#6e6955',
-			border: '1px solid #6e6955',
+			border: width > 768 ? '1px solid #6e6955' : null,
 		});
 	}, []);
 
@@ -105,6 +108,7 @@ export const Section1 = () => {
 								alignItems: 'center',
 								justifyContent: 'center',
 							}}
+							className='px-8'
 						>
 							<div className='w-full'>
 								<Typography sx={classes.title}>

@@ -5,21 +5,21 @@ import { Logo } from '../../components/SVGs/old-bank-cafe/Logo';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+// hooks
+import useWindowDimensions from '../../components/hooks/useWindowDimension';
 
 export const OldBankNavBar = () => {
+	const { width } = useWindowDimensions();
 	const classes = {
 		container: {
-			// boxShadow: '1px 2px 10px rgba(0,0,0,0.4)',
 			height: '50px',
-			// background: 'rgb(255 255 255 / 15%)',
 			width: '100%',
 			zIndex: 1000,
-			padding: '0 1rem',
+			padding: width > 768 ? '0 1rem' : null,
 			position: 'fixed',
 			top: 0,
 			display: 'flex',
 			alignItems: 'center',
-			// backdropFilter: 'blur(20px)',
 		},
 		navBtn: {
 			cursor: 'pointer',
@@ -27,10 +27,10 @@ export const OldBankNavBar = () => {
 			fontWeight: 600,
 			padding: '4px 16px',
 			color: 'white',
-			border: '1px solid white',
+			border: width > 768 ? '1px solid white' : null,
 			backdropFilter: 'blur(20px)',
 			borderRadius: '0.2rem',
-			margin: '0 0.5rem',
+			margin: width > 768 ? '0 0.5rem' : 0,
 			'&:hover': {
 				background: '#6d685426',
 				boxShadow: '1px 2px 10px rgba(0,0,0,0.1)',

@@ -36,7 +36,7 @@ export const Section2 = () => {
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader2: {
-			fontSize: '1.2rem',
+			fontSize: width > 768 ? '1.2rem' : '1rem',
 			fontFamily: 'Gentium Book Plus',
 			color: '#4a4637',
 			opacity: '0.8',
@@ -103,7 +103,7 @@ export const Section2 = () => {
 				zIndex: 2,
 				background: '#fffbeb',
 			}}
-			className='py-16'
+			className='py-8 md:py-16'
 			id='section-2'
 		>
 			<Container sx={{ padding: 0 }}>
@@ -112,9 +112,9 @@ export const Section2 = () => {
 					direction='row'
 					alignItems='center'
 					justifyContent='flex-start'
-					className='p-4'
+					className='md:p-4'
 				>
-					<Grid item xs={12} className='pb-8 md:pb-16 titleFade'>
+					<Grid item xs={12} className='p-4 md:p-0 pb-16 titleFade'>
 						<Typography className='' align='center' sx={classes.subheader}>
 							Stay a while and enjoy a nice coffee{' '}
 							<i className='fas fa-coffee' />
@@ -125,8 +125,11 @@ export const Section2 = () => {
 					</Grid>
 					<Grid item xs={12} md={6} className='fadeLeft'>
 						<div
-							className='w-full p-2 md:p-16 md:px-8 mr-0'
-							style={{ background: '#fff7d6', borderRadius: '0.3rem' }}
+							className='w-full p-8 md:p-16 md:px-8 mr-0'
+							style={{
+								background: '#fff7d6',
+								borderRadius: width > 768 ? '0.3rem' : null,
+							}}
 						>
 							<Typography sx={classes.title2} className='pb-2'>
 								Unique Experience
@@ -149,13 +152,13 @@ export const Section2 = () => {
 						item
 						xs={12}
 						md={6}
-						sx={{ marginLeft: '-1rem' }}
+						sx={{ marginLeft: width > 768 ? '-1rem' : null }}
 						className='fadeRight'
 					>
 						<div
 							className='video-container'
 							style={{
-								borderRadius: '0.3rem',
+								borderRadius: width > 768 ? '0.3rem' : null,
 								boxShadow: '1px 2px 3px rgb(78 76 64 / 20%)',
 							}}
 						>

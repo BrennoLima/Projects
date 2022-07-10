@@ -26,7 +26,7 @@ export const Section3 = () => {
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader2: {
-			fontSize: '1.2rem',
+			fontSize: width > 768 ? '1.2rem' : '1rem',
 			fontFamily: 'Gentium Book Plus',
 			color: '#4a4637',
 			opacity: '0.8',
@@ -113,9 +113,9 @@ export const Section3 = () => {
 				background: '#fffbeb',
 				zIndex: 2,
 			}}
-			className='py-16'
+			className='py-8 md:py-16'
 		>
-			<Grid item xs={12} className='pb-8 md:pb-10 titleFade2'>
+			<Grid item xs={12} className='p-4 md:p-0 pb-16 titleFade'>
 				<Typography align='center' sx={classes.subheader}>
 					The greatest selection of food and drinks
 				</Typography>
