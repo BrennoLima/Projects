@@ -114,7 +114,7 @@ export const Section2 = () => {
 					justifyContent='flex-start'
 					className='md:p-4'
 				>
-					<Grid item xs={12} className='p-4 md:p-0 pb-16 titleFade'>
+					<Grid item xs={12} className='p-4 md:pb-16 titleFade'>
 						<Typography className='' align='center' sx={classes.subheader}>
 							Stay a while and enjoy a nice coffee{' '}
 							<i className='fas fa-coffee' />

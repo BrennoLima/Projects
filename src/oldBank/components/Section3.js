@@ -115,7 +115,7 @@ export const Section3 = () => {
 			}}
 			className='py-8 md:py-16'
 		>
-			<Grid item xs={12} className='p-4 md:p-0 pb-16 titleFade'>
+			<Grid item xs={12} className='p-4 md:pb-16 titleFade'>
 				<Typography align='center' sx={classes.subheader}>
 					The greatest selection of food and drinks
 				</Typography>

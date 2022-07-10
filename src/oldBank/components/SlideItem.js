@@ -51,7 +51,13 @@ export const SlideItem = ({ slide }) => {
 			className='py-10'
 			sx={{ width: '100%' }}
 		>
-			<Grid item xs={12} md={6} className='p-2 fadeLeft2' sx={{ zIndex: '5' }}>
+			<Grid
+				item
+				xs={12}
+				md={6}
+				className='md:p-2 fadeLeft2'
+				sx={{ zIndex: '5' }}
+			>
 				<img src={slide.imgSrc} alt='old-bank' style={classes.image} />
 			</Grid>
 			<Grid
@@ -62,12 +68,12 @@ export const SlideItem = ({ slide }) => {
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
-					marginLeft: '-2rem',
+					marginLeft: width > 768 ? '-2rem' : null,
 				}}
 				className='fadeRight2'
 			>
 				<div
-					className='w-full p-2 md:p-16 mr-0'
+					className='w-full p-8 md:px-16'
 					style={{
 						background: '#fff7d6',
 						borderRadius: '0.3rem',
