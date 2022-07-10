@@ -66,6 +66,7 @@ export const Section1 = () => {
 			color: '#6e6955',
 			border: width > 768 ? '1px solid #6e6955' : null,
 		});
+		// eslint-disable-next-line
 	}, []);
 
 	return (
@@ -94,6 +95,7 @@ export const Section1 = () => {
 								display: 'flex',
 								alignItems: 'center',
 								justifyContent: 'center',
+								maxHeight: '50vh',
 							}}
 							className='p-16'
 						>

@@ -24,7 +24,7 @@ export const App = () => {
 					background: 'linear-gradient(150deg, #0A0A27, #31314D)',
 				}}
 			>
-				{/* <NavBar /> */}
+				<NavBar />
 				<Routes>
 					<Route path='/' element={<Landing />} />
 					<Route path='/creative-card' element={<CreativeCard />} />

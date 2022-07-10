@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 // Components
 import { BLogo } from '../components/SVGs/BLogo';
 // Material UI
@@ -25,7 +25,16 @@ export const NavBar = () => {
 			},
 		},
 	};
-	return (
+	const [noNavBar] = useState(['/old-bank', '/payment-page']);
+	const [navHidden, setNavHidden] = useState(false);
+
+	useEffect(() => {
+		if (noNavBar.includes(window.location.pathname)) setNavHidden(true);
+		else setNavHidden(false);
+		// eslint-disable-next-line
+	}, [window.location.pathname]);
+
+	return navHidden ? null : (
 		<div className={classes.container}>
 			<Container>
 				<Grid
