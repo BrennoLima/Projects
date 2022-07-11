@@ -18,7 +18,7 @@ export const Logo = () => {
 			/>
 			<path
 				d='M24 416V129.5H61.5V101.5H146.5C161.167 75.5 210 23.4 288 23C366 22.6 413.5 75.1667 427.5 101.5H512V129.5H549.5V416H512V448H417C397.667 469.833 369 514 288 514C208.5 514 175.667 470.167 155 448H61.5V416H24Z'
-				fill='#fffbeb'
+				fill='#FFF'
 				stroke='#24221b'
 				strokeWidth='5'
 				strokeLinejoin='round'

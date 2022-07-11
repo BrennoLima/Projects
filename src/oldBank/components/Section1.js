@@ -36,6 +36,7 @@ export const Section1 = () => {
 			fontSize: width > 768 ? '2.5rem' : '1.5rem',
 			fontWeight: 'bold',
 			opacity: 0.9,
+			color: '#FFF',
 		},
 		subtitle: {
 			fontSize: width > 768 ? '1.2rem' : '1rem',
@@ -47,7 +48,7 @@ export const Section1 = () => {
 		textContainer: {
 			background: 'rgb(0 0 0 / 5%)',
 			borderRadius: '0.5rem',
-			backdropFilter: 'blur(10px)',
+			backdropFilter: 'blur(5px)',
 		},
 	};
 	useEffect(() => {
@@ -116,7 +117,7 @@ export const Section1 = () => {
 								<Typography sx={classes.title}>
 									Welcome to Old Bank Cafe!
 								</Typography>
-								<Typography sx={classes.subtitle} style={{ color: '#e9e1d7' }}>
+								<Typography sx={classes.subtitle} style={{ color: '#FFF' }}>
 									A welcoming atmosphere where loved ones can gather,
 									conversation can bloom, and the coffee is of the highest
 									quality! The perfect place to connect with old friends, or to
