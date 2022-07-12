@@ -33,15 +33,7 @@ export const Section4 = () => {
 		},
 	};
 	useEffect(() => {
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '#section-3',
-				start: 'center',
-				end: 'center+=100',
-				scrub: 1,
-			},
-		});
-
+		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
 		tl.fromTo(
 			'.titleFade3',
 			{
@@ -70,6 +62,14 @@ export const Section4 = () => {
 				{ opacity: 1, y: 0, x: 0 },
 				'-=0.5'
 			);
+		ScrollTrigger.create({
+			scrollTrigger: {
+				trigger: '#section-3',
+				start: 'center',
+				end: 'center+=100',
+				scrub: 1,
+			},
+		});
 	}, []);
 
 	return (

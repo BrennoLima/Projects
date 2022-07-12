@@ -29,14 +29,7 @@ export const Section5 = () => {
 		},
 	};
 	useEffect(() => {
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '#section-4',
-				start: 'top',
-				end: 'top+=250',
-				scrub: 1,
-			},
-		});
+		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
 
 		tl.fromTo(
 			'.fadeUp',
@@ -46,6 +39,14 @@ export const Section5 = () => {
 			},
 			{ opacity: 1, y: 0, x: 0 }
 		);
+		ScrollTrigger.create({
+			scrollTrigger: {
+				trigger: '#section-4',
+				start: 'top',
+				end: 'top+=250',
+				scrub: 1,
+			},
+		});
 	}, []);
 	return (
 		<Grid
