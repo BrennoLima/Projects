@@ -52,14 +52,7 @@ export const Section1 = () => {
 		},
 	};
 	useEffect(() => {
-		const tl = gsap.timeline({
-			scrollTrigger: {
-				trigger: '#section-1',
-				start: 'bottom-=200',
-				end: 'bottom',
-				scrub: true,
-			},
-		});
+		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
 		tl.to('#old-bank-navbar', {
 			background: '#fffbeb',
 			boxShadow: '1px 2px 5px rgba(0,0,0,0.15)',
@@ -67,9 +60,17 @@ export const Section1 = () => {
 			color: '#6e6955',
 			border: width > 768 ? '1px solid #6e6955' : null,
 		});
+		ScrollTrigger.create({
+			animation: tl,
+			trigger: '#section-1',
+			start: 'bottom-=200',
+			end: 'bottom',
+			scrub: true,
+		});
+
 		// eslint-disable-next-line
 	}, []);
-
+	console.log('ScrollTrigger', ScrollTrigger);
 	return (
 		<Grid container direction='row' alignItems='center' justify='center'>
 			<Grid item xs={12} sx={classes.image}>
