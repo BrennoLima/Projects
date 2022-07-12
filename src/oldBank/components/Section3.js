@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import uuid from 'uuid';
 // Components
 import { SlideItem } from './SlideItem';
 //Material UI
@@ -97,12 +98,11 @@ export const Section3 = () => {
 				'-=0.5'
 			);
 		ScrollTrigger.create({
-			scrollTrigger: {
-				trigger: '#section-2',
-				start: 'center',
-				end: 'center+=100',
-				scrub: 1,
-			},
+			animation: tl,
+			trigger: '#section-2',
+			start: 'center',
+			end: 'center+=100',
+			scrub: 1,
 		});
 	}, []);
 
@@ -127,7 +127,7 @@ export const Section3 = () => {
 			<Container sx={{ padding: 0 }}>
 				<Slider {...settings}>
 					{slides.map((slide) => (
-						<div>
+						<div key={uuid()}>
 							<SlideItem slide={slide} />
 						</div>
 					))}

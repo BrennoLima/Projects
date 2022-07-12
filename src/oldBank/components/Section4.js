@@ -63,12 +63,11 @@ export const Section4 = () => {
 				'-=0.5'
 			);
 		ScrollTrigger.create({
-			scrollTrigger: {
-				trigger: '#section-3',
-				start: 'center',
-				end: 'center+=100',
-				scrub: 1,
-			},
+			animation: tl,
+			trigger: '#section-3',
+			start: 'center',
+			end: 'center+=100',
+			scrub: 1,
 		});
 	}, []);
 

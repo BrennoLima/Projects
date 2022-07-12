@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 // Components
 import { Logo } from '../../components/SVGs/old-bank-cafe/Logo';
+import background from './OldBankLanding.jpg';
 //Material UI
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -15,6 +16,11 @@ gsap.registerPlugin(ScrollTrigger);
 export const Section1 = () => {
 	const { width } = useWindowDimensions();
 	const classes = {
+		imageBackground: {
+			backgroundImage: `url(${background})`,
+			// filter: 'sepia(1)',
+			backgroundPosition: 'center',
+		},
 		container: {
 			height: '100vh',
 			width: '100vw',
@@ -25,33 +31,29 @@ export const Section1 = () => {
 			color: '#fff6ec',
 			background: '#00000080',
 		},
-		image: {
-			height: '100vh',
-			overflow: 'hidden',
-			position: 'fixed',
-			top: 0,
-		},
+
 		title: {
 			fontFamily: 'Gentium Book Plus',
-			fontSize: width > 768 ? '2.5rem' : '1.5rem',
+			fontSize: width > 768 ? '2rem' : '1.5rem',
 			fontWeight: 'bold',
-			opacity: 0.9,
 			color: '#FFF',
 		},
 		subtitle: {
-			fontSize: width > 768 ? '1.2rem' : '1rem',
+			fontSize: width > 768 ? '1.4rem' : '1rem',
 			fontWeight: 'normal',
-			opacity: 0.8,
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#FFF',
+			opacity: '0.8',
 		},
 		textContainer: {
 			background: 'rgb(0 0 0 / 5%)',
 			borderRadius: '0.5rem',
-			backdropFilter: 'blur(5px)',
+			backdropFilter: 'blur(10px)',
+			opacity: 0,
 		},
 	};
 	useEffect(() => {
+		gsap.to('#text-container', { opacity: 1, duration: 1 });
 		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
 		tl.to('#old-bank-navbar', {
 			background: '#fffbeb',
@@ -70,16 +72,14 @@ export const Section1 = () => {
 
 		// eslint-disable-next-line
 	}, []);
-	console.log('ScrollTrigger', ScrollTrigger);
 	return (
-		<Grid container direction='row' alignItems='center' justify='center'>
-			<Grid item xs={12} sx={classes.image}>
-				<img
-					src='assets/Images/old-bank-cafe/OldBankLanding.jpg'
-					alt='old-bank'
-					style={{ filter: 'sepia(1)' }}
-				/>
-			</Grid>
+		<Grid
+			container
+			direction='row'
+			alignItems='center'
+			justify='center'
+			sx={classes.imageBackground}
+		>
 			<Grid item xs={12} sx={classes.container} id='section-1'>
 				<Container>
 					<Grid
@@ -88,6 +88,7 @@ export const Section1 = () => {
 						alignItems='stretch'
 						justifyContent='center'
 						sx={classes.textContainer}
+						id='text-container'
 					>
 						<Grid
 							item
@@ -97,9 +98,9 @@ export const Section1 = () => {
 								display: 'flex',
 								alignItems: 'center',
 								justifyContent: 'center',
-								maxHeight: '50vh',
+								maxHeight: width > 768 ? '40vh' : '30vh',
 							}}
-							className='p-16'
+							className='p-8'
 						>
 							<Logo />
 						</Grid>
@@ -112,19 +113,13 @@ export const Section1 = () => {
 								alignItems: 'center',
 								justifyContent: 'center',
 							}}
-							className='px-8'
+							className='p-4'
 						>
 							<div className='w-full'>
-								<Typography sx={classes.title}>
-									Welcome to Old Bank Cafe!
-								</Typography>
+								<Typography sx={classes.title}>FROM BANK TO CAFE!</Typography>
 								<Typography sx={classes.subtitle} style={{ color: '#FFF' }}>
-									A welcoming atmosphere where loved ones can gather,
-									conversation can bloom, and the coffee is of the highest
-									quality! The perfect place to connect with old friends, or to
-									meet new ones! So come on out to chill & chat, meet a friend
-									for lunch, study with a classmate, or catch up on some
-									reading, we can't wait to serve you!
+									By the lake or in an old bank vault, enjoy the highest quality
+									coffee with friends and family.
 								</Typography>
 							</div>
 						</Grid>
