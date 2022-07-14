@@ -103,7 +103,7 @@ export const MortgageSummary = ({
 					<b className='white'>
 						$
 						{new Intl.NumberFormat('en-US').format(
-							outstandingPrincipal.toFixed(2)
+							Math.abs(outstandingPrincipal.toFixed(2))
 						)}
 					</b>
 					.
