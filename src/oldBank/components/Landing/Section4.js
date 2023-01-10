@@ -68,6 +68,7 @@ export const Section4 = () => {
 			start: 'center',
 			end: 'center+=100',
 			scrub: 1,
+			once: true,
 		});
 	}, []);
 

@@ -103,6 +103,7 @@ export const Section3 = () => {
 			start: 'center',
 			end: 'center+=100',
 			scrub: 1,
+			once: true,
 		});
 	}, []);
 

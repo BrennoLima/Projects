@@ -81,6 +81,11 @@ export const Item = ({ item }) => {
 				open={open}
 				onClose={() => setOpen(false)}
 				maxWidth='sm'
+				PaperProps={{
+					style: {
+						backgroundColor: '#fffbeb',
+					},
+				}}
 			>
 				<CardHeader
 					title={

@@ -67,6 +67,7 @@ export const Section1 = () => {
 			start: 'bottom-=200',
 			end: 'bottom',
 			scrub: 1,
+			once: true,
 		});
 
 		// eslint-disable-next-line

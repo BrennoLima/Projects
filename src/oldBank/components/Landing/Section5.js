@@ -45,6 +45,7 @@ export const Section5 = () => {
 			start: 'top',
 			end: 'top+=250',
 			scrub: 1,
+			once: true,
 		});
 	}, []);
 	return (
