@@ -8,7 +8,7 @@ import Link from '@mui/material/Link';
 // hooks
 import useWindowDimensions from '../../components/hooks/useWindowDimension';
 
-export const OldBankNavBar = () => {
+export const OldBankNavBar = ({ color }) => {
 	const { width } = useWindowDimensions();
 	const classes = {
 		container: {
@@ -20,14 +20,16 @@ export const OldBankNavBar = () => {
 			top: 0,
 			display: 'flex',
 			alignItems: 'center',
+			background: color ? '#fffbeb' : null,
+			boxShadow: color ? '1px 2px 5px rgba(0,0,0,0.15)' : null,
 		},
 		navBtn: {
 			cursor: 'pointer',
 			textDecoration: 'none',
 			fontWeight: 600,
 			padding: '4px 16px',
-			color: 'white',
-			border: width > 768 ? '1px solid white' : null,
+			color: color ? '#6e6955' : 'white',
+			border: color ? '1px solid #6e6955' : '1px solid white',
 			backdropFilter: 'blur(20px)',
 			borderRadius: '0.2rem',
 			margin: width > 768 ? '0 0.5rem' : 0,
@@ -64,17 +66,17 @@ export const OldBankNavBar = () => {
 						</Link>
 					</Grid>
 					<Grid item className='flex items-center justify-center'>
-						<Link className='navBtn' sx={classes.navBtn} href={'/'}>
+						<Link className='navBtn' sx={classes.navBtn} href={'/menu'}>
 							Menu
 						</Link>
 					</Grid>
 					<Grid item className='flex items-center justify-center'>
-						<Link className='navBtn' sx={classes.navBtn} href={'/'}>
+						<Link className='navBtn' sx={classes.navBtn} href={'/about-us'}>
 							About
 						</Link>
 					</Grid>
 					<Grid item className='flex items-center justify-center'>
-						<Link className='navBtn' sx={classes.navBtn} href={'/'}>
+						<Link className='navBtn' sx={classes.navBtn} href={'/contact-us'}>
 							Contact us
 						</Link>
 					</Grid>

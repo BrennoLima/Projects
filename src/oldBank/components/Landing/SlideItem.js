@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 // hooks
-import useWindowDimensions from '../../components/hooks/useWindowDimension';
+import useWindowDimensions from '../../../components/hooks/useWindowDimension';
 
 export const SlideItem = ({ slide }) => {
 	const { width } = useWindowDimensions();

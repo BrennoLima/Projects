@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 // hooks
-import useWindowDimensions from '../../components/hooks/useWindowDimension';
+import useWindowDimensions from '../../../components/hooks/useWindowDimension';
 // Gsap
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -62,7 +62,7 @@ export const Section5 = () => {
 					direction='row'
 					alignItems='center'
 					justifyContent='center'
-					className='py-16 fadeUp'
+					className='pt-8 pb-16 fadeUp'
 				>
 					<Grid item xs={12} className='pb-4'>
 						<Typography className='' align='center' sx={classes.subheader}>

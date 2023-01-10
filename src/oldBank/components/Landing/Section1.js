@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 // Components
-import { Logo } from '../../components/SVGs/old-bank-cafe/Logo';
+import { Logo } from '../../../components/SVGs/old-bank-cafe/Logo';
 import background from './OldBankLanding.jpg';
 //Material UI
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 // hooks
-import useWindowDimensions from '../../components/hooks/useWindowDimension';
+import useWindowDimensions from '../../../components/hooks/useWindowDimension';
 // Gsap
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -18,7 +18,6 @@ export const Section1 = () => {
 	const classes = {
 		imageBackground: {
 			backgroundImage: `url(${background})`,
-			// filter: 'sepia(1)',
 			backgroundPosition: 'center',
 		},
 		container: {
@@ -67,7 +66,7 @@ export const Section1 = () => {
 			trigger: '#section-1',
 			start: 'bottom-=200',
 			end: 'bottom',
-			scrub: true,
+			scrub: 1,
 		});
 
 		// eslint-disable-next-line

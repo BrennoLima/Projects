@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 // hooks
-import useWindowDimensions from '../../components/hooks/useWindowDimension';
+import useWindowDimensions from '../../../components/hooks/useWindowDimension';
 // Gsap
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
