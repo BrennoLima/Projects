@@ -116,7 +116,7 @@ export const Section2 = () => {
 				>
 					<Grid item xs={12} className='p-4 md:pb-16 titleFade'>
 						<Typography className='' align='center' sx={classes.subheader}>
-							Stay a while and enjoy a nice coffee{' '}
+							Stay a while and enjoy the best coffee{' '}
 							<i className='fas fa-coffee' />
 						</Typography>
 						<Typography sx={classes.subheader2} className='pt-2' align='center'>

@@ -9,10 +9,9 @@ import useWindowDimensions from '../../../components/hooks/useWindowDimension';
 // Gsap
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { GingerbreadMan } from '../Animation/GingerbreadMan';
 gsap.registerPlugin(ScrollTrigger);
 
-export const Section4 = () => {
+export const Section6 = () => {
 	const { width } = useWindowDimensions();
 	const classes = {
 		subheader: {
@@ -36,20 +35,40 @@ export const Section4 = () => {
 	useEffect(() => {
 		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
 		tl.fromTo(
-			'.gingertitle',
+			'.titleFade3',
 			{
 				opacity: 0.3,
-				y: -20,
+				x: -100,
 			},
 			{ opacity: 1, y: 0, x: 0 }
-		);
-
+		)
+			.fromTo(
+				'.fadeLeft3',
+				{
+					opacity: 0.3,
+					y: 100,
+					x: -100,
+				},
+				{ opacity: 1, y: 0, x: 0 },
+				'-=0.5'
+			)
+			.fromTo(
+				'.fadeRight3',
+				{
+					opacity: 0.3,
+					y: 100,
+					x: 100,
+				},
+				{ opacity: 1, y: 0, x: 0 },
+				'-=0.5'
+			);
 		ScrollTrigger.create({
 			animation: tl,
 			trigger: '#section-3',
 			start: 'center',
 			end: 'center+=100',
 			scrub: 1,
+			once: true,
 		});
 	}, []);
 
@@ -59,10 +78,10 @@ export const Section4 = () => {
 			xs={12}
 			style={{
 				zIndex: 2,
-				background: '#FFF7D6',
+				background: '#fffbeb',
 			}}
-			className='py-8'
-			id='gingerbread'
+			className='py-16'
+			id='section-4'
 		>
 			<Container sx={{ padding: 0 }}>
 				<Grid
@@ -70,17 +89,39 @@ export const Section4 = () => {
 					direction='row'
 					alignItems='center'
 					justifyContent='center'
+					className='p-4'
 				>
-					<Grid item xs={12} className='pb-10 gingertitle'>
+					<Grid item xs={12} className='pb-16 titleFade3'>
 						<Typography className='' align='center' sx={classes.subheader}>
-							Cookies Decoration Class
+							Guru Award winner 2021 <i className='fas fa-award' />
 						</Typography>
 						<Typography sx={classes.subheader2} className='pt-2' align='center'>
-							COMING SOON!
+							Best Interior and Recommended on Restaurant Guru!
 						</Typography>
 					</Grid>
-					<Grid item xs={12} className='flex items-center justify-center'>
-						<GingerbreadMan />
+					<Grid
+						item
+						xs={12}
+						md={6}
+						className='flex items-center justify-center pb-2 md:pb-0 fadeLeft3'
+					>
+						<img
+							src='assets/Images/old-bank-cafe/award1.png'
+							alt='award1'
+							style={classes.award}
+						/>
+					</Grid>
+					<Grid
+						item
+						xs={12}
+						md={6}
+						className='flex items-center justify-center pb-2 md:pb-0 fadeRight3'
+					>
+						<img
+							src='assets/Images/old-bank-cafe/award2.png'
+							alt='award1'
+							style={classes.award}
+						/>
 					</Grid>
 				</Grid>
 			</Container>

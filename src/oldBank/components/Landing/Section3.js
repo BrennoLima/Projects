@@ -116,6 +116,7 @@ export const Section3 = () => {
 				zIndex: 2,
 			}}
 			className='py-8 md:py-16'
+			id='section-3'
 		>
 			<Grid item xs={12} className='p-4 md:pb-16 titleFade'>
 				<Typography align='center' sx={classes.subheader}>
