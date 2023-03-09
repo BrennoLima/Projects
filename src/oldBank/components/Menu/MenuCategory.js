@@ -108,8 +108,7 @@ export const MenuCategory = ({ props }) => {
 					{
 						name: 'Macchiato',
 						price: 3.5,
-						description:
-							'A shot of espresso with steamed milk and a layer of foam on top.',
+						description: 'Double shot of espresso with dry milk foam on top.',
 						image: '/assets/Images/old-bank-cafe/macchiato.jpg',
 					},
 					{
@@ -144,8 +143,8 @@ export const MenuCategory = ({ props }) => {
 						name: 'Mocha Cafe',
 						price: 3.5,
 						description:
-							'A shot of espresso with steamed milk and a layer of foam on top.',
-						image: '/assets/Images/old-bank-cafe/coffee.png',
+							'Double shot of espresso with hot chocolate and whipped cream.',
+						image: '/assets/Images/old-bank-cafe/mocha.jpg',
 					},
 					{
 						name: 'Vienna Cafe',
@@ -217,6 +216,93 @@ export const MenuCategory = ({ props }) => {
 						description:
 							'A shot of espresso with steamed milk and a layer of foam on top.',
 						image: '/assets/Images/old-bank-cafe/horchatta.jpg',
+					},
+				]);
+				break;
+			case 'lunch':
+				setItems([
+					{
+						name: 'BLT',
+						price: 3.5,
+						description:
+							'BLT-bacon, lettuce, tomato on toasted bun, toast buttered + mayo. Wrap option grilled on panini press.',
+						image: '/assets/Images/old-bank-cafe/BLT.jpg',
+					},
+					{
+						name: 'Swiss Cheese Sandwich',
+						price: 3.5,
+						description:
+							'Swiss cheese, goat cheese, spinach, and avocado grilled to perfection on a panini press.',
+						image: '/assets/Images/old-bank-cafe/sandwich1.jpg',
+					},
+					{
+						name: 'Angus burguer',
+						price: 3.5,
+						description:
+							'Angus burger and fries, toasted bun, mayo, ketchup, red onion, lettuce, tomato, mozzarella cheese, angus burger (grass feed, no antibiotics, no hormones).',
+						image: '/assets/Images/old-bank-cafe/angus-burguer.jpg',
+					},
+					{
+						name: 'Ham and Cheese Sandwich',
+						price: 3.5,
+						description:
+							'Black forest ham, and swiss cheese grilled to perfection on a panini press.',
+						image: '/assets/Images/old-bank-cafe/sandwich2.jpg',
+					},
+					{
+						name: 'Chicken Avocado Sandwich',
+						price: 3.5,
+						description:
+							'​Mayo, chicken, cheese, avocado, and bacon grilled to perfection on a panini press.',
+						image: '/assets/Images/old-bank-cafe/.jpg',
+					},
+					{
+						name: 'Chipotle Chicken Sandwich',
+						price: 3.5,
+						description:
+							'Mayo, chicken, cheese, onion, and tomato grilled to perfection on a panini press.',
+						image: '/assets/Images/old-bank-cafe/.jpg',
+					},
+					{
+						name: 'Red Pepper Sandwich',
+						price: 3.5,
+						description:
+							'Goat cheese, spinach, and roasted red pepper grilled to perfection on a panini press.',
+						image: '/assets/Images/old-bank-cafe/.jpg',
+					},
+					{
+						name: 'Grilled Cheese Sandwich',
+						price: 3.5,
+						description:
+							'Mozzarella cheese, grilled to perfection on a panini press.',
+						image: '/assets/Images/old-bank-cafe/.jpg',
+					},
+					{
+						name: 'Greek Wrap',
+						price: 3.5,
+						description:
+							'Greek wrap with chicken breast mayo, red onion, black olives, tomato, cucumber, romain lettuce, feta cheese, greek-feta dressing (cold wrap).',
+						image: '/assets/Images/old-bank-cafe/wrap1.jpg',
+					},
+					{
+						name: 'Curry Chicken Wrap',
+						price: 3.5,
+						description:
+							'Curried chicken wrap with dry cranberry, green onion, turmeric powder, curry, mayo, and lettuce (cold wrap).',
+						image: '/assets/Images/old-bank-cafe/wrap2.jpg',
+					},
+					{
+						name: 'Tuna Wrap',
+						price: 3.5,
+						description: 'Tuna, mayo, lettuce, and green onion .',
+						image: '/assets/Images/old-bank-cafe/tuna-wrap.jpg',
+					},
+					{
+						name: 'Greek Salad',
+						price: 3.5,
+						description:
+							'Lettuce, tomato, cucumber, onion, feta cheese, and dressing.',
+						image: '/assets/Images/old-bank-cafe/greek-salad.jpg',
 					},
 				]);
 				break;

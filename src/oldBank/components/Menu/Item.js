@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Dialog from '@mui/material/Dialog';
-import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import Slide from '@material-ui/core/Slide';
 
@@ -18,7 +17,7 @@ export const Item = ({ item }) => {
 		button: {
 			background: '#4a4637',
 			borderRadius: '0.3rem',
-			padding: '0.2rem 3rem',
+			padding: '0.2rem 1.5rem',
 			marginTop: '0.4rem',
 			transition: 'all 0.5s ease',
 			border: '1px solid #4a4637',

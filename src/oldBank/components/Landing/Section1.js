@@ -67,7 +67,6 @@ export const Section1 = () => {
 			start: 'bottom-=200',
 			end: 'bottom',
 			scrub: 1,
-			once: true,
 		});
 
 		// eslint-disable-next-line
@@ -116,10 +115,12 @@ export const Section1 = () => {
 							className='p-4'
 						>
 							<div className='w-full'>
-								<Typography sx={classes.title}>FROM BANK TO CAFE!</Typography>
 								<Typography sx={classes.subtitle} style={{ color: '#FFF' }}>
-									By the lake or in an old bank vault, enjoy the highest quality
-									coffee with friends and family.
+									Welcome to Old Bank Cafe! Where history meets a perfect cup of
+									coffee! Our coffee shop is located in a former bank building
+									that has been beautifully renovated and transformed into a
+									warm and welcoming space that's perfect for coffee lovers and
+									history buffs alike.
 								</Typography>
 							</div>
 						</Grid>
