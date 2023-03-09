@@ -14,7 +14,7 @@ export const SlideItem = ({ slide }) => {
 			fontWeight: 'normal',
 			opacity: 0.8,
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 		},
 		image: {
 			borderRadius: width > 768 ? '0.3rem' : '0',
@@ -24,7 +24,7 @@ export const SlideItem = ({ slide }) => {
 			letterSpacing: '1px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		actionBtn: {
@@ -88,6 +88,7 @@ export const SlideItem = ({ slide }) => {
 					<Button
 						sx={classes.actionBtn}
 						startIcon={<i className={slide.button.icon} />}
+						href={slide.button.link}
 					>
 						{slide.button.text}
 					</Button>

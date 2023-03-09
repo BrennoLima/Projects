@@ -42,12 +42,11 @@ export const Section1 = () => {
 			fontWeight: 'normal',
 			fontFamily: 'Gentium Book Plus',
 			color: '#FFF',
-			opacity: '0.8',
 		},
 		textContainer: {
 			background: 'rgb(0 0 0 / 5%)',
 			borderRadius: '0.5rem',
-			backdropFilter: 'blur(10px)',
+			backdropFilter: 'blur(5px)',
 			opacity: 0,
 		},
 	};
@@ -58,8 +57,8 @@ export const Section1 = () => {
 			background: '#fffbeb',
 			boxShadow: '1px 2px 5px rgba(0,0,0,0.15)',
 		}).to('.navBtn', {
-			color: '#6e6955',
-			border: width > 768 ? '1px solid #6e6955' : null,
+			color: '#492306',
+			border: width > 768 ? '1px solid #492306' : null,
 		});
 		ScrollTrigger.create({
 			animation: tl,
@@ -116,11 +115,10 @@ export const Section1 = () => {
 						>
 							<div className='w-full'>
 								<Typography sx={classes.subtitle} style={{ color: '#FFF' }}>
-									Welcome to Old Bank Cafe! Where history meets a perfect cup of
-									coffee! Our coffee shop is located in a former bank building
-									that has been beautifully renovated and transformed into a
-									warm and welcoming space that's perfect for coffee lovers and
-									history buffs alike.
+									Come experience our warm and welcoming atmosphere, where great
+									conversations and highest quality coffee meet. Perfect for
+									catching up with friends, lunch dates, studying, or simply
+									relaxing with a good book. Join us today at the Old Bank Cafe!
 								</Typography>
 							</div>
 						</Grid>

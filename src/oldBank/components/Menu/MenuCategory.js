@@ -30,13 +30,13 @@ export const MenuCategory = ({ props }) => {
 			fontWeight: 'bold',
 			opacity: 0.8,
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 		},
 		title2: {
 			letterSpacing: '1px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader: {
@@ -53,7 +53,7 @@ export const MenuCategory = ({ props }) => {
 		subheader2: {
 			fontSize: width > 768 ? '1.2rem' : '1rem',
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 			opacity: '0.8',
 		},
 		actionBtn: {

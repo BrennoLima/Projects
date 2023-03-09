@@ -23,13 +23,13 @@ export const Section3 = () => {
 			letterSpacing: '4px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader2: {
 			fontSize: width > 768 ? '1.2rem' : '1rem',
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 			opacity: '0.8',
 		},
 	};
@@ -48,22 +48,22 @@ export const Section3 = () => {
 			imgSrc: 'assets/Images/old-bank-cafe/image10.jpg',
 			title: 'Always fresh',
 			description:
-				'By prioritizing only the freshest ingredients and offering plenty of vegan & gluten-free options, visitors will feel a true home-grown Quinte West experience as an Old Bank Cafe patron.',
-			button: { icon: 'fas fa-utensils', text: 'Menu' },
+				'Our commitment to freshness means only the best ingredients are used. With vegan and gluten-free options available, come taste the local Quinte West flavor.',
+			button: { icon: 'fas fa-utensils', text: 'Menu', link: '/menu' },
 		},
 		{
 			imgSrc: 'assets/Images/old-bank-cafe/image8.jpg',
 			title: 'Pation season',
 			description:
-				'Enjoy the summer with great coffee. Our riverside patio is open and waiting for you!',
-			button: { icon: 'fas fa-bacon', text: 'Breakfast' },
+				'Savor the summer with a perfect cup of coffee on our open riverside patio. The perfect spot to relax and unwind. Visit us today!',
+			button: { icon: 'fas fa-bacon', text: 'Breakfast', link: '/menu' },
 		},
 		{
 			imgSrc: 'assets/Images/old-bank-cafe/image12.jpg',
 			title: 'Bring it home',
 			description:
-				'We have a wide selection of beans to choose from. The highest quality beans in the comfort of your house.',
-			button: { icon: 'fas fa-seedling', text: 'Beans' },
+				'Experience the highest quality coffee beans in the comfort of your own home with our wide selection of premium beans. Elevate your morning routine today!',
+			button: { icon: 'fas fa-seedling', text: 'Beans', link: '/menu' },
 		},
 	];
 	useEffect(() => {
@@ -123,7 +123,7 @@ export const Section3 = () => {
 					The greatest selection of food and drinks
 				</Typography>
 				<Typography sx={classes.subheader2} className='pt-2' align='center'>
-					From breakfast to lunch
+					from breakfast to lunch and everything in between!
 				</Typography>
 			</Grid>
 			<Container sx={{ padding: 0 }}>

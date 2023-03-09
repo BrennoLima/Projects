@@ -19,13 +19,13 @@ export const Section4 = () => {
 			letterSpacing: '4px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader2: {
 			fontSize: '1.2rem',
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 			opacity: '0.8',
 		},
 		award: {
@@ -48,8 +48,9 @@ export const Section4 = () => {
 			animation: tl,
 			trigger: '#section-3',
 			start: 'center',
-			end: 'center+=100',
+			end: 'center-=100',
 			scrub: 1,
+			once: true,
 		});
 	}, []);
 

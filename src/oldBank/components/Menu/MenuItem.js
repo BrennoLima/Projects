@@ -8,12 +8,12 @@ import Link from '@mui/material/Link';
 export const MenuItem = ({ item }) => {
 	const classes = {
 		button: {
-			background: '#4a4637',
+			background: '#68492f',
 			borderRadius: '0.3rem',
 			padding: '0.2rem 3rem',
 			marginTop: '0.4rem',
 			transition: 'all 0.5s ease',
-			border: '1px solid #4a4637',
+			border: '1px solid #68492f',
 		},
 		title: {
 			fontSize: '1rem',
@@ -40,7 +40,7 @@ export const MenuItem = ({ item }) => {
 			width: '150px',
 			height: '150px',
 			borderRadius: '50%',
-			border: '1px solid #6e695580',
+			border: '1px solid #49230680',
 			transition: 'all 1s ease',
 		},
 	};

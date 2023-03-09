@@ -20,26 +20,26 @@ export const Menu = () => {
 			fontWeight: 'bold',
 			opacity: 0.8,
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 		},
 		title2: {
 			letterSpacing: '1px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader: {
 			letterSpacing: '4px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader2: {
 			fontSize: width > 768 ? '1.2rem' : '1rem',
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 			opacity: '0.8',
 		},
 		actionBtn: {
@@ -157,7 +157,7 @@ export const Menu = () => {
 							Menu
 						</Typography>
 						<Typography sx={classes.subheader2} className='pt-2' align='center'>
-							Browse our menu by category by selecting the buttons below
+							Browse and discover the perfect dish for your craving!
 						</Typography>
 					</Grid>
 					<Grid item xs={12} sx={{ marginBottom: '1rem' }}>

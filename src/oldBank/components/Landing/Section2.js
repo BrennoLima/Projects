@@ -19,26 +19,26 @@ export const Section2 = () => {
 			fontWeight: 'normal',
 			opacity: 0.8,
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 		},
 		title2: {
 			letterSpacing: '1px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader: {
 			letterSpacing: '4px',
 			fontWeight: 600,
 			fontSize: width > 768 ? '2rem' : '1.4rem',
-			color: '#6e6955',
+			color: '#492306',
 			fontFamily: 'Gentium Book Plus',
 		},
 		subheader2: {
 			fontSize: width > 768 ? '1.2rem' : '1rem',
 			fontFamily: 'Gentium Book Plus',
-			color: '#4a4637',
+			color: '#68492f',
 			opacity: '0.8',
 		},
 		actionBtn: {
@@ -116,11 +116,11 @@ export const Section2 = () => {
 				>
 					<Grid item xs={12} className='p-4 md:pb-16 titleFade'>
 						<Typography className='' align='center' sx={classes.subheader}>
-							Stay a while and enjoy the best coffee{' '}
+							Sip, relax, and savor the moment with every cup{' '}
 							<i className='fas fa-coffee' />
 						</Typography>
 						<Typography sx={classes.subheader2} className='pt-2' align='center'>
-							Get a taste of the best grains of the world
+							Experience coffee like never before
 						</Typography>
 					</Grid>
 					<Grid item xs={12} md={6} className='fadeLeft'>
@@ -132,17 +132,19 @@ export const Section2 = () => {
 							}}
 						>
 							<Typography sx={classes.title2} className='pb-2'>
-								Unique Experience
+								Unique experience
 							</Typography>
 							<Typography sx={classes.subtitle} className='py-4 pb-6'>
-								Delicious food, comfy seats, a lovely riverside patio in the
-								summer, free wifi! One unique feature we boast is the Old Bank
-								Vault - refurbished into a comfortable space to host you and
-								your friends for lunch or a cup o' joe!
+								Enjoy delicious food, comfy seats, and a lovely riverside patio
+								during summer. Don't miss our refurbished Old Bank Vault - a
+								cozy space perfect for lunch or a cup of coffee with friends.
+								Plus, stay connected with free wifi throughout the shop. Come
+								visit us today!
 							</Typography>
 							<Button
 								sx={classes.actionBtn}
 								startIcon={<i className='fas fa-utensils' />}
+								href='/menu'
 							>
 								Menu
 							</Button>
