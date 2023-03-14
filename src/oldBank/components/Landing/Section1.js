@@ -28,7 +28,6 @@ export const Section1 = () => {
 			justifyContent: 'center',
 			zIndex: 5,
 			color: '#fff6ec',
-			background: '#00000080',
 		},
 
 		title: {
@@ -44,10 +43,9 @@ export const Section1 = () => {
 			color: '#FFF',
 		},
 		textContainer: {
-			background: 'rgb(0 0 0 / 5%)',
+			background: 'rgb(0 0 0 / 40%)',
 			borderRadius: '0.5rem',
 			backdropFilter: 'blur(5px)',
-			opacity: 0,
 		},
 	};
 	useEffect(() => {

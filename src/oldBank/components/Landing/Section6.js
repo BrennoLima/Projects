@@ -64,8 +64,8 @@ export const Section6 = () => {
 			);
 		ScrollTrigger.create({
 			animation: tl,
-			trigger: '#section-3',
-			start: 'center',
+			trigger: '#gingerbread',
+			start: 'center-=100',
 			end: 'center+=100',
 			scrub: 1,
 			once: true,
@@ -93,16 +93,16 @@ export const Section6 = () => {
 				>
 					<Grid item xs={12} className='pb-16 titleFade3'>
 						<Typography className='' align='center' sx={classes.subheader}>
-							Guru Award winner 2021 <i className='fas fa-award' />
+							Guru Award winner 2021 and 2022 <i className='fas fa-award' />
 						</Typography>
 						<Typography sx={classes.subheader2} className='pt-2' align='center'>
-							Best Interior and Recommended on Restaurant Guru!
+							Best Interior, desert and recommended on restaurant Guru!
 						</Typography>
 					</Grid>
 					<Grid
 						item
 						xs={12}
-						md={6}
+						md={4}
 						className='flex items-center justify-center pb-2 md:pb-0 fadeLeft3'
 					>
 						<img
@@ -114,8 +114,20 @@ export const Section6 = () => {
 					<Grid
 						item
 						xs={12}
-						md={6}
-						className='flex items-center justify-center pb-2 md:pb-0 fadeRight3'
+						md={4}
+						className='flex items-center justify-center pb-2 md:pb-0 fadeLeft3'
+					>
+						<img
+							src='assets/Images/old-bank-cafe/award3.png'
+							alt='award3'
+							style={classes.award}
+						/>
+					</Grid>
+					<Grid
+						item
+						xs={12}
+						md={4}
+						className='flex items-center justify-center pb-2 md:pb-0 fadeLeft3'
 					>
 						<img
 							src='assets/Images/old-bank-cafe/award2.png'

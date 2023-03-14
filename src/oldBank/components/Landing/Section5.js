@@ -32,7 +32,7 @@ export const Section5 = () => {
 		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
 
 		tl.fromTo(
-			'.fadeUp',
+			'.fadeLeftFooter',
 			{
 				opacity: 0.3,
 				x: -150,
@@ -43,7 +43,7 @@ export const Section5 = () => {
 			animation: tl,
 			trigger: '#section-4',
 			start: 'top',
-			end: 'top+=250',
+			end: 'top+=100',
 			scrub: 1,
 			once: true,
 		});
@@ -63,7 +63,7 @@ export const Section5 = () => {
 					direction='row'
 					alignItems='center'
 					justifyContent='center'
-					className='pt-8 pb-16 fadeUp'
+					className='pt-8 pb-16 fadeLeftFooter'
 				>
 					<Grid item xs={12} className='pb-4'>
 						<Typography className='' align='center' sx={classes.subheader}>

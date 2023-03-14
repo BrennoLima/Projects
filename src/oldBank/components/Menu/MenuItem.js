@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 
-export const MenuItem = ({ item }) => {
+export const MenuItem = ({ item, label = true }) => {
 	const classes = {
 		button: {
 			background: '#68492f',
@@ -56,18 +56,20 @@ export const MenuItem = ({ item }) => {
 					/>
 				</Link>
 			</Grid>
-			<Grid item xs={12} className='flex items-center justify-center'>
-				<Button
-					variant='outlined'
-					style={classes.button}
-					type='link'
-					href={`/menu/${item.category}`}
-				>
-					<Typography align='center' style={classes.title}>
-						{item.title}
-					</Typography>
-				</Button>
-			</Grid>
+			{label && (
+				<Grid item xs={12} className='flex items-center justify-center'>
+					<Button
+						variant='outlined'
+						style={classes.button}
+						type='link'
+						href={`/menu/${item.category}`}
+					>
+						<Typography align='center' style={classes.title}>
+							{item.title}
+						</Typography>
+					</Button>
+				</Grid>
+			)}
 		</Grid>
 	);
 };
