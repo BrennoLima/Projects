@@ -107,6 +107,14 @@ export const Landing = () => {
 			background: '#c9a200',
 			route: '/old-bank',
 		},
+		{
+			name: 'Nutool',
+			description: 'A nutricional tool to assist in the meal planning.',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#008080',
+			route: '/nutool',
+		},
 	]);
 	// const [onDisplayProjects, setOnDisplayProjects] = useState([{}]);
 	//////////////////////////////////////
