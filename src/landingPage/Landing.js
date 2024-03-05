@@ -115,9 +115,15 @@ export const Landing = () => {
 			background: '#008080',
 			route: '/nutool',
 		},
+		{
+			name: 'RafaArts',
+			description: 'Portfolion website.',
+			company: 'Free lancer',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#666666',
+			route: '/rafa-arts',
+		},
 	]);
-	// const [onDisplayProjects, setOnDisplayProjects] = useState([{}]);
-	//////////////////////////////////////
 
 	return (
 		<Container
