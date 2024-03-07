@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Box, Container, IconButton, Fade, Typography } from '@mui/material';
+import {
+	Box,
+	Container,
+	Divider,
+	IconButton,
+	Fade,
+	Typography,
+} from '@mui/material';
 import { Navbar } from './components/Navbar';
 import { darkTheme } from '../themes/dark';
 import { lightTheme } from '../themes/light';
 import { ArtShowcase } from './components/ArtShowcase';
 import { ActionButtons } from './components/ActionButtons';
+import { Portfolio } from './components/Portfolio';
+import { About } from './components/About';
 
 export const RafaArts = () => {
 	const [mode, setMode] = useState('dark');
@@ -23,6 +32,7 @@ export const RafaArts = () => {
 		<ThemeProvider theme={theme}>
 			<Fade in timeout={1000}>
 				<Box
+					id='rafa-arts'
 					sx={{
 						width: '100%',
 						minHeight: '100vh',
@@ -45,10 +55,11 @@ export const RafaArts = () => {
 					</Container>
 					<ArtShowcase />
 					<ActionButtons />
-					<div style={{ height: '100vh' }}></div>
-					<div id='about'>
-						<Typography color='primary'>About here</Typography>
-					</div>
+					<Portfolio />
+					<Divider sx={{ mt: 6 }} />
+					<Container>
+						<About />
+					</Container>
 					<div id='footer' style={{ height: '100vh' }}>
 						<Typography color='primary'>start</Typography>
 					</div>
