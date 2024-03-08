@@ -7,6 +7,7 @@ export const ImageCard = ({ image }) => {
 	return (
 		<Box sx={{ overflow: 'hidden' }}>
 			<Card
+				onDrag={(e) => e.stopPropagation()}
 				onClick={() => setOpenImage(true)}
 				sx={{
 					height: '400px',

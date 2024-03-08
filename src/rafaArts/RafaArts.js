@@ -8,12 +8,12 @@ import {
 	Fade,
 	Typography,
 } from '@mui/material';
-import { Navbar } from './components/Navbar';
+import { Navbar } from './components/Navbar/Navbar';
 import { darkTheme } from '../themes/dark';
 import { lightTheme } from '../themes/light';
 import { ArtShowcase } from './components/ArtShowcase';
-import { ActionButtons } from './components/ActionButtons';
-import { Portfolio } from './components/Portfolio';
+import { ActionButtons } from './components/ActionButtons/ActionButtons';
+import { Portfolio } from './components/Portfolio/Portfolio';
 import { About } from './components/About';
 
 export const RafaArts = () => {
@@ -40,26 +40,12 @@ export const RafaArts = () => {
 						background: (theme) => theme.palette.background.paper,
 					}}
 				>
-					<Container sx={{ position: 'relative' }}>
-						<Navbar />
-						<IconButton
-							onClick={toggleMode}
-							sx={{ position: 'absolute', top: 16, right: 16 }}
-						>
-							{mode === 'dark' ? (
-								<i className='fas fa-sun' key='sun' />
-							) : (
-								<i className='fas fa-moon' key='moon' />
-							)}
-						</IconButton>
-					</Container>
+					<Navbar mode={mode} toggleMode={toggleMode} />
 					<ArtShowcase />
 					<ActionButtons />
 					<Portfolio />
 					<Divider sx={{ mt: 6 }} />
-					<Container>
-						<About />
-					</Container>
+					<About />
 					<div id='footer' style={{ height: '100vh' }}>
 						<Typography color='primary'>start</Typography>
 					</div>

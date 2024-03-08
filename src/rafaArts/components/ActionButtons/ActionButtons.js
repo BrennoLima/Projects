@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { Box, Fade, Stack, IconButton, Typography } from '@mui/material';
+import { CharacterIcon } from './CharacterIcon';
+import { FanArtIcon } from './FanArtIcon';
 
 export const ActionButtons = () => {
 	const [label, setLabel] = useState('');
 
 	const getIcon = (icon) => {
 		switch (icon.icon) {
-			case 'Portfolio':
-				return <i className='fas fa-paint-brush' />;
+			case 'Character Art':
+				return <CharacterIcon />;
 			case 'Fan Art':
-				return <i className='fas fa-gamepad' />;
+				return <FanArtIcon />;
 			case 'Store':
 				return <i className='fas fa-store' />;
 			case 'Education':
@@ -24,11 +26,11 @@ export const ActionButtons = () => {
 	const getAction = (icon) => {
 		let element = null;
 		switch (icon) {
-			case 'Portfolio':
-				element = document.getElementById('portfolio');
+			case 'Character Art':
+				element = document.getElementById('character-art');
 				return element.scrollIntoView({ behavior: 'smooth' });
 			case 'Fan Art':
-				element = document.getElementById('fanArt');
+				element = document.getElementById('fan-art');
 				element.scrollIntoView({ behavior: 'smooth' });
 				return '';
 			case 'Store':
@@ -56,13 +58,12 @@ export const ActionButtons = () => {
 				onMouseLeave={() => setLabel('')}
 				onClick={() => getAction(icon.icon)}
 				sx={{
-					transition: 'all 0.25s linear',
+					transition: 'all 0.1s linear',
 					fontSize: '32px',
 					width: '50px',
 					height: '50px',
 					':hover': {
 						transform: 'scale(1.1) translateY(-3px)',
-						color: (theme) => theme.palette.primary.main,
 					},
 				}}
 			>
@@ -74,7 +75,7 @@ export const ActionButtons = () => {
 	return (
 		<Stack sx={{ py: 4 }}>
 			<Stack direction='row' gap={3} sx={{ mb: 4, justifyContent: 'center' }}>
-				{['Portfolio', 'Fan Art', 'Store', 'Education', 'About Me'].map(
+				{['Character Art', 'Fan Art', 'Store', 'Education', 'About Me'].map(
 					(icon) => (
 						<ActionButton icon={icon} key={icon} />
 					)
