@@ -108,14 +108,6 @@ export const Landing = () => {
 			route: '/old-bank',
 		},
 		{
-			name: 'Nutool',
-			description: 'A nutricional tool to assist in the meal planning.',
-			company: 'Own project',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
-			background: '#008080',
-			route: '/nutool',
-		},
-		{
 			name: 'RafaArts',
 			description: 'Portfolion website.',
 			company: 'Free lancer',
@@ -124,6 +116,9 @@ export const Landing = () => {
 			route: '/rafa-arts',
 		},
 	]);
+	const onDisaplayProjects = allProjects.filter((project) =>
+		project.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
+	);
 
 	return (
 		<Container
@@ -209,7 +204,7 @@ export const Landing = () => {
 					alignItems='center'
 					justifyContent='flex-start'
 				>
-					{allProjects.map((project) => (
+					{onDisaplayProjects.map((project) => (
 						<Grid
 							item
 							xs={12}

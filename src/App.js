@@ -7,7 +7,6 @@ import { CreativeCard } from './creativeCard/CreativeCard';
 import { PaymentPage } from './paymentPage/PaymentPage';
 import { MortgageCalculator } from './mortgageCalculator/MortgageCalculator';
 import { NFTsGalery } from './nftsGalery/NFTsGalery';
-import { Nutool } from './Nutool/Nutool';
 import { RafaArts } from './rafaArts/RafaArts';
 import { OldBankLanding } from './oldBank/components/Landing/OldBankLanding';
 import { About } from './oldBank/components/About/About';
@@ -37,7 +36,6 @@ export const App = () => {
 					<Route path='/payment-page' element={<PaymentPage />} />
 					<Route path='/mortgage-calculator' element={<MortgageCalculator />} />
 					<Route path='/nfts-galery' element={<NFTsGalery />} />
-					<Route path='/nutool' element={<Nutool />} />
 					{/**
 					 * Rafa arts Routes
 					 */}
