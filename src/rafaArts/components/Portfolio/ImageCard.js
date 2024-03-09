@@ -30,6 +30,7 @@ export const ImageCard = ({ image }) => {
 							backgroundPosition: 'center',
 							backgroundSize: 'contain',
 							backgroundRepeat: 'no-repeat',
+							backgroundColor: '#000',
 						}}
 					>
 						<IconButton

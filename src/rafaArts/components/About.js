@@ -1,7 +1,21 @@
 import React from 'react';
-import { Box, Container, Stack, Typography, Avatar } from '@mui/material';
+import {
+	Box,
+	Container,
+	IconButton,
+	Stack,
+	Typography,
+	Avatar,
+} from '@mui/material';
+import { SocialMedias } from './SocialMedias';
 
 export const About = () => {
+	const scrollToActions = () => {
+		const element = document.getElementById('actions');
+		element.scrollIntoView({
+			behavior: 'smooth',
+		});
+	};
 	return (
 		<Container>
 			<Stack sx={{ py: 10, alignItems: 'center' }} id='about'>
@@ -12,7 +26,7 @@ export const About = () => {
 				/>
 				<Typography
 					variant='h5'
-					sx={{ mt: 2, color: (theme) => theme.palette.text.primary }}
+					sx={{ mt: 2, color: (theme) => theme.palette.primary.main }}
 				>
 					Rafael Araujo
 				</Typography>
@@ -20,7 +34,7 @@ export const About = () => {
 					variant='caption'
 					sx={{ color: (theme) => theme.palette.text.primary }}
 				>
-					Graphic Designer
+					3D Artist
 				</Typography>
 				<Box sx={{ p: 5, px: 10 }}>
 					<Typography
@@ -61,6 +75,12 @@ export const About = () => {
 						on the world of 3D art.
 					</Typography>
 				</Box>
+				<Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+					<IconButton onClick={scrollToActions}>
+						<i className='fas fa-chevron-up' />
+					</IconButton>
+				</Box>
+				<SocialMedias />
 			</Stack>
 		</Container>
 	);

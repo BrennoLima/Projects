@@ -41,7 +41,7 @@ export const PortfolioSection = ({
 				<Button
 					onClick={() => slide1Ref?.current?.slickNext()}
 					sx={{
-						color: (theme) => theme.palette.text.primary,
+						color: '#FFF',
 						position: 'absolute',
 						top: '50%',
 						right: 0,
@@ -66,16 +66,16 @@ export const PortfolioSection = ({
 				<Typography
 					color='primary'
 					variant='h4'
-					fontWeight={500}
+					fontWeight={600}
 					sx={{
-						mb: 4,
-						letterSpacing: '4px',
+						mb: 2,
+						letterSpacing: '2px',
 					}}
 				>
 					{title}
 				</Typography>
 				<Typography
-					variant='subtitle'
+					variant='subtitle2'
 					sx={{
 						color: (theme) => theme.palette.primary.light,
 					}}
@@ -86,7 +86,7 @@ export const PortfolioSection = ({
 					<Button
 						component={Link}
 						to={link}
-						sx={{ textTransform: 'none', mt: 2, pl: 0 }}
+						sx={{ textTransform: 'none', mt: 4, pl: 0 }}
 					>
 						{buttonText}
 					</Button>

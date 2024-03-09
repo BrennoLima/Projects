@@ -14,7 +14,7 @@ export const ActionButtons = () => {
 				return <FanArtIcon />;
 			case 'Store':
 				return <i className='fas fa-store' />;
-			case 'Education':
+			case 'Courses':
 				return <i className='fas fa-university' />;
 			case 'About Me':
 				return <i className='fas fa-user-alt' />;
@@ -35,7 +35,7 @@ export const ActionButtons = () => {
 				return '';
 			case 'Store':
 				return (window.location.href = '/store');
-			case 'Education':
+			case 'Courses':
 				element = document.getElementById('education');
 				return element.scrollIntoView({ behavior: 'smooth' });
 			case 'About Me':
@@ -75,9 +75,9 @@ export const ActionButtons = () => {
 	};
 
 	return (
-		<Stack sx={{ py: 4 }}>
+		<Stack sx={{ py: 4 }} id='actions'>
 			<Stack direction='row' gap={3} sx={{ mb: 4, justifyContent: 'center' }}>
-				{['Character Art', 'Fan Art', 'Store', 'Education', 'About Me'].map(
+				{['Character Art', 'Fan Art', 'Store', 'Courses', 'About Me'].map(
 					(icon) => (
 						<ActionButton icon={icon} key={icon} />
 					)
@@ -93,24 +93,16 @@ export const ActionButtons = () => {
 						height: '32px',
 						WebkitTextFillColor: 'transparent',
 						backgroundClip: 'text !important',
-						letterSpacing: '4px',
+						letterSpacing: '2px',
 						background: (theme) =>
-							`linear-gradient(${theme.palette.text.primary}, transparent)`,
+							`linear-gradient(${theme.palette.primary.light}, transparent)`,
 					}}
 				>
 					{label.toLocaleUpperCase()}
 				</Typography>
 			</Fade>
 			<Box sx={{ display: 'flex', justifyContent: 'center' }}>
-				<IconButton
-					onClick={() => getAction('footer')}
-					sx={{
-						transition: 'all 0.25s linear',
-						':hover': {
-							color: (theme) => theme.palette.primary.main,
-						},
-					}}
-				>
+				<IconButton onClick={() => getAction('footer')}>
 					<i className='fas fa-chevron-down' />
 				</IconButton>
 			</Box>
