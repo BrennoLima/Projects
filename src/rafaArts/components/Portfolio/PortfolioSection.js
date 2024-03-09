@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Box, Button, Link, Grid, Typography, IconButton } from '@mui/material';
+import { Box, Button, Link, Grid, Typography } from '@mui/material';
 // Slider
 import Slider from 'react-slick';
 // Components
@@ -38,19 +38,24 @@ export const PortfolioSection = ({
 						<ImageCard key={count + 'char'} image={slide} />
 					))}
 				</Slider>
-				<IconButton
+				<Button
 					onClick={() => slide1Ref?.current?.slickNext()}
 					sx={{
+						color: (theme) => theme.palette.text.primary,
 						position: 'absolute',
 						top: '50%',
 						right: 0,
 						zIndex: 10,
-						width: '50px',
-						height: '50px',
+						height: '100%',
+						widht: '30px',
+						background: 'rgb(0 0 0 / 40%)',
+						borderRadius: '0.5rem',
+						backdropFilter: 'blur(5px)',
+						transform: 'translateY(-50%)',
 					}}
 				>
 					<i className='fas fa-chevron-right' />
-				</IconButton>
+				</Button>
 			</Grid>
 			<Grid
 				item

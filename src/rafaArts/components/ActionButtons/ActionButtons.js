@@ -58,6 +58,8 @@ export const ActionButtons = () => {
 				onMouseLeave={() => setLabel('')}
 				onClick={() => getAction(icon.icon)}
 				sx={{
+					overflow: 'hidden',
+					color: (theme) => theme.palette.text.primary,
 					transition: 'all 0.1s linear',
 					fontSize: '32px',
 					width: '50px',
