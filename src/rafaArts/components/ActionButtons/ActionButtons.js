@@ -59,7 +59,7 @@ export const ActionButtons = () => {
 				onClick={() => getAction(icon.icon)}
 				sx={{
 					overflow: 'hidden',
-					color: (theme) => theme.palette.text.primary,
+					color: (theme) => theme.palette.text.secondary,
 					transition: 'all 0.1s linear',
 					fontSize: '32px',
 					width: '50px',
@@ -95,7 +95,7 @@ export const ActionButtons = () => {
 						backgroundClip: 'text !important',
 						letterSpacing: '2px',
 						background: (theme) =>
-							`linear-gradient(${theme.palette.primary.light}, transparent)`,
+							`linear-gradient(${theme.palette.text.primary}, transparent)`,
 					}}
 				>
 					{label.toLocaleUpperCase()}

@@ -64,7 +64,7 @@ export const PortfolioSection = ({
 				sx={{ p: 5, display: 'flex', flexDirection: 'column' }}
 			>
 				<Typography
-					color='primary'
+					color='text.primary'
 					variant='h4'
 					fontWeight={600}
 					sx={{
@@ -74,19 +74,19 @@ export const PortfolioSection = ({
 				>
 					{title}
 				</Typography>
-				<Typography
-					variant='subtitle2'
-					sx={{
-						color: (theme) => theme.palette.primary.light,
-					}}
-				>
+				<Typography variant='subtitle2' color='text.secondary'>
 					{text}
 				</Typography>
 				<Box>
 					<Button
 						component={Link}
 						to={link}
-						sx={{ textTransform: 'none', mt: 4, pl: 0 }}
+						sx={{
+							textTransform: 'none',
+							mt: 4,
+							pl: 0,
+							color: (theme) => theme.palette.text.primary,
+						}}
 					>
 						{buttonText}
 					</Button>

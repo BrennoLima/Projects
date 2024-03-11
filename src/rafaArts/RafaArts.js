@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { alpha, createTheme, ThemeProvider } from '@mui/material/styles';
-import { Box, Divider, Fade } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 import { Navbar } from './components/Navbar/Navbar';
 import { darkTheme } from '../themes/dark';
 import { lightTheme } from '../themes/light';
@@ -25,42 +25,40 @@ export const RafaArts = () => {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Fade in timeout={1000}>
+			<Box
+				id='rafa-arts'
+				sx={{
+					width: '100%',
+					zIndex: 1,
+					background: (theme) => theme.palette.background.paper,
+				}}
+			>
 				<Box
-					id='rafa-arts'
 					sx={{
-						width: '100%',
-						zIndex: 1,
-						background: (theme) => theme.palette.background.paper,
+						left: 0,
+						top: '50%',
+						transform: 'translateY(-50%)',
+						position: 'fixed',
+						zIndex: 10,
+						px: 0.5,
+						py: 1,
+						background: (theme) =>
+							alpha(theme.palette.primary.contrastText, 0.25),
+						borderRadius: '0.5rem',
+						backdropFilter: 'blur(5px)',
 					}}
 				>
-					<Box
-						sx={{
-							left: 0,
-							top: '50%',
-							transform: 'translateY(-50%)',
-							position: 'fixed',
-							zIndex: 10,
-							px: 0.5,
-							py: 1,
-							background: (theme) =>
-								alpha(theme.palette.primary.contrastText, 0.25),
-							borderRadius: '0.5rem',
-							backdropFilter: 'blur(5px)',
-						}}
-					>
-						<SocialMedias direction='column' />
-					</Box>
-					<Navbar mode={mode} toggleMode={toggleMode} />
-					<ArtShowcase />
-					<ActionButtons />
-					<Portfolio />
-					<Divider sx={{ mt: 6 }} />
-					<About />
-					<Divider sx={{ mb: 6 }} />
-					<Footer />
+					<SocialMedias direction='column' />
 				</Box>
-			</Fade>
+				<Navbar mode={mode} toggleMode={toggleMode} />
+				<ArtShowcase />
+				<ActionButtons />
+				<Portfolio />
+				<Divider sx={{ mt: 6 }} />
+				<About />
+				<Divider sx={{ mb: 6 }} />
+				<Footer />
+			</Box>
 		</ThemeProvider>
 	);
 };

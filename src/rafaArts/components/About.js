@@ -26,13 +26,13 @@ export const About = () => {
 				/>
 				<Typography
 					variant='h5'
-					sx={{ mt: 2, color: (theme) => theme.palette.primary.main }}
+					sx={{ mt: 2, color: (theme) => theme.palette.text.primary }}
 				>
 					Rafael Araujo
 				</Typography>
 				<Typography
 					variant='caption'
-					sx={{ color: (theme) => theme.palette.text.primary }}
+					sx={{ color: (theme) => theme.palette.text.secondary }}
 				>
 					3D Artist
 				</Typography>
@@ -41,7 +41,7 @@ export const About = () => {
 						variant='body2'
 						align='center'
 						sx={{
-							color: (theme) => theme.palette.text.primary,
+							color: (theme) => theme.palette.text.secondary,
 							lineHeight: '1.5',
 						}}
 					>
@@ -57,7 +57,7 @@ export const About = () => {
 						variant='body2'
 						align='center'
 						sx={{
-							color: (theme) => theme.palette.text.primary,
+							color: (theme) => theme.palette.text.secondary,
 							mt: 2,
 							lineHeight: '1.5',
 						}}
