@@ -61,9 +61,9 @@ export const ActionButtons = () => {
 					overflow: 'hidden',
 					color: (theme) => theme.palette.text.secondary,
 					transition: 'all 0.1s linear',
-					fontSize: '32px',
-					width: '50px',
-					height: '50px',
+					fontSize: ['1.5rem', '2rem'],
+					width: ['2.5rem', '3rem'],
+					height: ['2.5rem', '3rem'],
 					':hover': {
 						transform: 'scale(1.1) translateY(-3px)',
 					},
@@ -76,7 +76,11 @@ export const ActionButtons = () => {
 
 	return (
 		<Stack sx={{ py: 4 }} id='actions'>
-			<Stack direction='row' gap={3} sx={{ mb: 4, justifyContent: 'center' }}>
+			<Stack
+				direction='row'
+				gap={3}
+				sx={{ mb: [2, 4], justifyContent: 'center' }}
+			>
 				{['Character Art', 'Fan Art', 'Store', 'Courses', 'About Me'].map(
 					(icon) => (
 						<ActionButton icon={icon} key={icon} />
@@ -89,7 +93,7 @@ export const ActionButtons = () => {
 					fontWeight='bold'
 					variant='h5'
 					sx={{
-						mb: 4,
+						mb: [2, 4],
 						height: '32px',
 						WebkitTextFillColor: 'transparent',
 						backgroundClip: 'text !important',

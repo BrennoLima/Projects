@@ -16,8 +16,8 @@ export const Portfolio = () => {
 			direction='row'
 			alignItems='center'
 			justify='center'
-			sx={{ py: 6 }}
-			gap={6}
+			sx={{ py: [3, 6] }}
+			gap={[3, 6]}
 		>
 			<PortfolioSection
 				images={slides}

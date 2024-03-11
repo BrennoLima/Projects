@@ -4,6 +4,7 @@ import { Box, Button, Link, Grid, Typography } from '@mui/material';
 import Slider from 'react-slick';
 // Components
 import { ImageCard } from './ImageCard';
+import useWindowDimension from '../../../components/hooks/useWindowDimension';
 
 export const PortfolioSection = ({
 	images,
@@ -13,12 +14,13 @@ export const PortfolioSection = ({
 	link,
 	sectionId,
 }) => {
+	const { width } = useWindowDimension();
 	const slide1Ref = useRef(null);
 	const settings = {
 		dots: false,
 		arrows: false,
 		infinite: true,
-		slidesToShow: 3,
+		slidesToShow: width > 900 ? 3 : 1,
 		speed: 500,
 		slidesToScroll: 1,
 		cssEase: 'linear',
@@ -61,11 +63,11 @@ export const PortfolioSection = ({
 				item
 				xs={12}
 				md={4}
-				sx={{ p: 5, display: 'flex', flexDirection: 'column' }}
+				sx={{ p: [3, 5], display: 'flex', flexDirection: 'column' }}
 			>
 				<Typography
 					color='text.primary'
-					variant='h4'
+					variant={width > 900 ? 'h4' : 'h5'}
 					fontWeight={600}
 					sx={{
 						mb: 2,

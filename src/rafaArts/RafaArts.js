@@ -64,9 +64,9 @@ export const RafaArts = () => {
 				<ArtShowcase />
 				<ActionButtons />
 				<Portfolio />
-				<Divider sx={{ mt: 6 }} />
+				<Divider sx={{ mt: [3, 6] }} />
 				<About />
-				<Divider sx={{ mb: 6 }} />
+				<Divider sx={{ mb: [3, 6] }} />
 				<Footer />
 			</Box>
 		</ThemeProvider>

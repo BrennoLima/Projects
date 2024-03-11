@@ -8,7 +8,6 @@ export const CharacterIcon = () => {
 		<svg
 			width='100%'
 			preserveAspectRatio='xMidYMid meet'
-			height='446'
 			viewBox='0 0 427 446'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'

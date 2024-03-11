@@ -18,7 +18,7 @@ export const About = () => {
 	};
 	return (
 		<Container>
-			<Stack sx={{ py: 10, alignItems: 'center' }} id='about'>
+			<Stack sx={{ py: [5, 10], alignItems: 'center' }} id='about'>
 				<Avatar
 					alt='Rafael Araujo'
 					src='https://media.licdn.com/dms/image/C4D03AQEIZ_L6XO2X_w/profile-displayphoto-shrink_800_800/0/1605626268766?e=1715212800&v=beta&t=emZBq3G2gdBOLTt8Kr7JG0b9p8KSaCMi_PXibR25gRU'
@@ -36,7 +36,7 @@ export const About = () => {
 				>
 					3D Artist
 				</Typography>
-				<Box sx={{ p: 5, px: 10 }}>
+				<Box sx={{ p: 5, px: [2, 10] }}>
 					<Typography
 						variant='body2'
 						align='center'

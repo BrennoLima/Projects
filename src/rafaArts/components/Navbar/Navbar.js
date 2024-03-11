@@ -6,7 +6,12 @@ export const Navbar = ({ mode, toggleMode }) => {
 	return (
 		<Container sx={{ position: 'relative' }}>
 			<Box sx={{ display: 'flex', justifyContent: 'center', py: 2 }}>
-				<Box sx={{ width: '100px', height: '100px' }}>
+				<Box
+					sx={{
+						width: ['5rem', '7rem'],
+						height: ['5rem', '7rem'],
+					}}
+				>
 					<Logo />
 				</Box>
 			</Box>

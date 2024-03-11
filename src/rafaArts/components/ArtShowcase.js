@@ -17,7 +17,7 @@ export const ArtShowcase = () => {
 				muted
 				style={{
 					width: '100%',
-					height: width > 768 ? '30vh' : '15vh',
+					height: width > 768 ? '30vh' : '20vh',
 					objectFit: 'cover',
 					objectPosition: 'center',
 				}}
