@@ -30,7 +30,7 @@ export const ImageCard = ({ image }) => {
 							backgroundPosition: 'center',
 							backgroundSize: 'contain',
 							backgroundRepeat: 'no-repeat',
-							backgroundColor: '#000',
+							backgroundColor: (theme) => theme.palette.background.paper,
 						}}
 					>
 						<IconButton
@@ -41,6 +41,10 @@ export const ImageCard = ({ image }) => {
 								right: '8px',
 								width: '45px',
 								height: '45px',
+								transition: '0.2s color ease-in',
+								'&:hover': {
+									color: (theme) => theme.palette.text.primary,
+								},
 							}}
 						>
 							<i className='fas fa-times' />
