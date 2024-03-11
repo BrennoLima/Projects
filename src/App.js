@@ -7,12 +7,13 @@ import { CreativeCard } from './creativeCard/CreativeCard';
 import { PaymentPage } from './paymentPage/PaymentPage';
 import { MortgageCalculator } from './mortgageCalculator/MortgageCalculator';
 import { NFTsGalery } from './nftsGalery/NFTsGalery';
-import { Nutool } from './Nutool/Nutool';
+import { RafaArts } from './rafaArts/RafaArts';
 import { OldBankLanding } from './oldBank/components/Landing/OldBankLanding';
 import { About } from './oldBank/components/About/About';
 import { Menu } from './oldBank/components/Menu/Menu';
 import { MenuCategory } from './oldBank/components/Menu/MenuCategory';
 import { Contact } from './oldBank/components/Contact/Contact';
+
 // Slick
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -35,7 +36,11 @@ export const App = () => {
 					<Route path='/payment-page' element={<PaymentPage />} />
 					<Route path='/mortgage-calculator' element={<MortgageCalculator />} />
 					<Route path='/nfts-galery' element={<NFTsGalery />} />
-					<Route path='/nutool' element={<Nutool />} />
+					{/**
+					 * Rafa arts Routes
+					 */}
+					<Route path='/rafa-arts' element={<RafaArts />} />
+					<Route path='/store' element={<div>rafa store</div>} />
 					{/**
 					 * Old Bank Routes
 					 */}
