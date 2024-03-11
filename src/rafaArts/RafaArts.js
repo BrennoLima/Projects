@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { alpha, createTheme, ThemeProvider } from '@mui/material/styles';
 import { Box, Divider } from '@mui/material';
 import { Navbar } from './components/Navbar/Navbar';
@@ -19,9 +19,19 @@ export const RafaArts = () => {
 	);
 
 	const toggleMode = () => {
-		if (mode === 'dark') return setMode('light');
+		if (mode === 'dark') {
+			localStorage.setItem('theme-mode', 'light');
+			return setMode('light');
+		}
+		localStorage.setItem('theme-mode', 'dark');
 		return setMode('dark');
 	};
+
+	useEffect(() => {
+		if (localStorage.getItem('theme-mode')) {
+			setMode(localStorage.getItem('theme-mode'));
+		}
+	}, []);
 
 	return (
 		<ThemeProvider theme={theme}>
