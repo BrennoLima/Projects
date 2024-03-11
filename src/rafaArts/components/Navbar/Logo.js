@@ -30,7 +30,7 @@ export const Logo = () => {
 					y2='100'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color='#4b4b4b' />
+					<stop stop-color={theme.palette.divider} />
 					<stop
 						offset='1'
 						stop-color={theme.palette.primary.contrastText}

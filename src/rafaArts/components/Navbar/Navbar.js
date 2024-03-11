@@ -12,7 +12,15 @@ export const Navbar = ({ mode, toggleMode }) => {
 			</Box>
 			<IconButton
 				onClick={toggleMode}
-				sx={{ position: 'absolute', top: 16, right: 16 }}
+				sx={{
+					position: 'fixed',
+					top: 16,
+					right: 16,
+					transition: '0.2s color ease-in',
+					'&:hover': {
+						color: (theme) => theme.palette.text.primary,
+					},
+				}}
 			>
 				{mode === 'dark' ? (
 					<i className='fas fa-sun' key='sun' />

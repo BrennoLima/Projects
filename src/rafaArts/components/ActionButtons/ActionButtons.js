@@ -95,14 +95,22 @@ export const ActionButtons = () => {
 						backgroundClip: 'text !important',
 						letterSpacing: '2px',
 						background: (theme) =>
-							`linear-gradient(${theme.palette.text.primary}, transparent)`,
+							`linear-gradient(${theme.palette.text.primary}, ${theme.palette.divider})`,
 					}}
 				>
 					{label.toLocaleUpperCase()}
 				</Typography>
 			</Fade>
 			<Box sx={{ display: 'flex', justifyContent: 'center' }}>
-				<IconButton onClick={() => getAction('footer')}>
+				<IconButton
+					onClick={() => getAction('footer')}
+					sx={{
+						transition: '0.2s color ease-in',
+						'&:hover': {
+							color: (theme) => theme.palette.text.primary,
+						},
+					}}
+				>
 					<i className='fas fa-chevron-down' />
 				</IconButton>
 			</Box>

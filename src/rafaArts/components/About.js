@@ -76,7 +76,15 @@ export const About = () => {
 					</Typography>
 				</Box>
 				<Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
-					<IconButton onClick={scrollToActions}>
+					<IconButton
+						onClick={scrollToActions}
+						sx={{
+							transition: '0.2s color ease-in',
+							'&:hover': {
+								color: (theme) => theme.palette.text.primary,
+							},
+						}}
+					>
 						<i className='fas fa-chevron-up' />
 					</IconButton>
 				</Box>

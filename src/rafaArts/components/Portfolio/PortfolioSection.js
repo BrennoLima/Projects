@@ -84,8 +84,12 @@ export const PortfolioSection = ({
 						sx={{
 							textTransform: 'none',
 							mt: 4,
-							pl: 0,
 							color: (theme) => theme.palette.text.primary,
+							border: '1px solid transparent',
+							transition: '0.2s border ease-in',
+							'&:hover': {
+								borderColor: (theme) => theme.palette.text.primary,
+							},
 						}}
 					>
 						{buttonText}
