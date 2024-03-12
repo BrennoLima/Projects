@@ -18,7 +18,7 @@ export const Navbar = ({ mode, toggleMode }) => {
 			<IconButton
 				onClick={toggleMode}
 				sx={{
-					zIndex: 10,
+					zIndex: 100,
 					position: 'fixed',
 					top: 16,
 					right: 16,

@@ -36,7 +36,7 @@ export const ActionButtons = () => {
 			case 'Store':
 				return (window.location.href = '/store');
 			case 'Courses':
-				element = document.getElementById('education');
+				element = document.getElementById('courses');
 				return element.scrollIntoView({ behavior: 'smooth' });
 			case 'About Me':
 				element = document.getElementById('about');

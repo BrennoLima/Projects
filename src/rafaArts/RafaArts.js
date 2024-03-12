@@ -10,6 +10,7 @@ import { Portfolio } from './components/Portfolio/Portfolio';
 import { About } from './components/About';
 import { Footer } from './components/Footer';
 import { SocialMedias } from './components/SocialMedias';
+import { Courses } from './components/Courses/Courses';
 
 export const RafaArts = () => {
 	const [mode, setMode] = useState('dark');
@@ -64,7 +65,7 @@ export const RafaArts = () => {
 				<ArtShowcase />
 				<ActionButtons />
 				<Portfolio />
-				<Divider sx={{ mt: [3, 6] }} />
+				<Courses />
 				<About />
 				<Divider sx={{ mb: [3, 6] }} />
 				<Footer />

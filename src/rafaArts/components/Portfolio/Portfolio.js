@@ -5,12 +5,10 @@ import { PortfolioSection } from './PortfolioSection';
 
 export const Portfolio = () => {
 	const characterArt = [
-		'https://cdnb.artstation.com/p/marketplace/presentation_assets/001/900/281/large/file.jpg?1660040579',
-		'https://cdnb.artstation.com/p/marketplace/presentation_assets/001/900/275/large/file.jpg?1660040511',
-		'https://cdnb.artstation.com/p/marketplace/presentation_assets/001/901/697/large/file.jpg?1660082091',
-		'https://cdnb.artstation.com/p/marketplace/presentation_assets/001/900/267/large/file.jpg?1660040462',
-		'https://pre00.deviantart.net/b906/th/pre/f/2017/325/6/2/anim_07_by_deathstalkerarts-dbuew3k.jpg',
-		'https://pre00.deviantart.net/8694/th/pre/f/2017/325/b/3/anim_05_by_deathstalkerarts-dbuevol.jpg',
+		'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/291289351/original/c95b51b3c31caf9cf908bd21bacf2a1ba0bd0a25/sculpt-3d-character-model-for-game-3d-printing-and-animation.png',
+		'https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/338820577/original/73031600fafb300c064bb163c17c24d47620ec98/do-3d-model-sculpt-high-quality-any-character-object-stl-dnd-for-3d-printing.png',
+		'https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/291289351/original/0d37d82efeff56b9e1cdb94c76921f3d85b2b4ae/sculpt-3d-character-model-for-game-3d-printing-and-animation.jpg',
+		'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/336742781/original/d557afcb22ee6e9b56abb41778aedf6ddaf651ba/character-design-concept-for-you.png',
 	];
 	const fanArt = [
 		'https://mir-s3-cdn-cf.behance.net/project_modules/disp/4385b186718333.5da20c1cc5bdc.png',
