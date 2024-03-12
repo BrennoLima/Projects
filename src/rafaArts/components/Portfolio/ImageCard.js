@@ -16,6 +16,7 @@ export const ImageCard = ({ image }) => {
 					backgroundPosition: 'center',
 					cursor: 'pointer',
 					transition: 'all 0.5s ease',
+					borderRadius: 0,
 					':hover': {
 						transform: 'scale(1.1)',
 					},
