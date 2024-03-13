@@ -31,8 +31,8 @@ export const About = () => {
 			animation: tl,
 			trigger: '#text1',
 			// start: 'top',
-			// end: 'bottom',
-			markers: true,
+			end: 'top-=100%',
+			// markers: true,
 			scrub: 1,
 		});
 
@@ -40,7 +40,7 @@ export const About = () => {
 			`#avatar`,
 			{ opacity: 0, y: 50 },
 			{
-				scrollTrigger: `#avatar`,
+				scrollTrigger: { trigger: '#avatar', markers: true },
 				opacity: '100%',
 				y: 0,
 				duration: 1,
