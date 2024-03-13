@@ -24,6 +24,18 @@ export const About = () => {
 
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
+		console.log('ScrollTrigger', ScrollTrigger);
+		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
+		tl.fromTo('#text1', { opacity: 0, y: 50 }, { opacity: '100%', y: 0 });
+		ScrollTrigger.create({
+			animation: tl,
+			trigger: '#text1',
+			// start: 'top',
+			// end: 'bottom',
+			markers: true,
+			scrub: 1,
+		});
+
 		gsap.fromTo(
 			`#avatar`,
 			{ opacity: 0, y: 50 },
@@ -34,16 +46,17 @@ export const About = () => {
 				duration: 1,
 			}
 		);
-		gsap.fromTo(
-			`#text1`,
-			{ opacity: 0, y: 50 },
-			{
-				scrollTrigger: `#text1`,
-				opacity: '100%',
-				y: 0,
-				duration: 1,
-			}
-		);
+
+		// gsap.fromTo(
+		// 	`#text1`,
+		// 	{ opacity: 0, y: 50 },
+		// 	{
+		// 		scrollTrigger: `#text1`,
+		// 		opacity: '100%',
+		// 		y: 0,
+		// 		duration: 1,
+		// 	}
+		// );
 		gsap.fromTo(
 			`#text2`,
 			{ opacity: 0, y: 50 },
