@@ -10,8 +10,9 @@ import {
 import { SocialMedias } from './SocialMedias';
 import { useTheme } from '@emotion/react';
 // GSAP
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger } from 'gsap/all';
 
 export const About = () => {
 	const theme = useTheme();
@@ -24,45 +25,33 @@ export const About = () => {
 
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		console.log('ScrollTrigger', ScrollTrigger);
-		var tl = gsap.timeline({ defaults: { duration: 1, ease: 'linear' } });
-		tl.fromTo('#text1', { opacity: 0, y: 50 }, { opacity: '100%', y: 0 });
-		ScrollTrigger.create({
-			animation: tl,
-			trigger: '#text1',
-			// start: 'top',
-			end: 'top-=100%',
-			// markers: true,
-			scrub: 1,
-		});
 
 		gsap.fromTo(
-			`#avatar`,
+			'#avatar',
 			{ opacity: 0, y: 50 },
 			{
-				ScrollTrigger: { trigger: '#avatar', markers: true },
+				scrollTrigger: { trigger: '#avatar', markers: true },
 				opacity: '100%',
 				y: 0,
 				duration: 1,
 			}
 		);
 
-		// gsap.fromTo(
-		// 	`#text1`,
-		// 	{ opacity: 0, y: 50 },
-		// 	{
-		// 		scrollTrigger: `#text1`,
-		// 		opacity: '100%',
-		// 		y: 0,
-		// 		duration: 1,
-		// 	}
-		// );
 		gsap.fromTo(
-			`#text2`,
+			'#text1',
 			{ opacity: 0, y: 50 },
 			{
-				ScrollTrigger: '#text2',
-				// scrollTrigger: `#text2`,
+				scrollTrigger: '#text',
+				opacity: '100%',
+				y: 0,
+				duration: 1,
+			}
+		);
+		gsap.fromTo(
+			'#text2',
+			{ opacity: 0, y: 50 },
+			{
+				scrollTrigger: '#text2',
 				opacity: '100%',
 				y: 0,
 				duration: 1,
