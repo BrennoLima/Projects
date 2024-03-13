@@ -26,11 +26,11 @@ export const NavBar = () => {
 		},
 	};
 	const [noNavBar] = useState(['/old-bank', '/payment-page', '/rafa-arts']);
-	const [navHidden, setNavHidden] = useState(false);
+	const [navHidden, setNavHidden] = useState(true);
 
 	useEffect(() => {
-		if (noNavBar.includes(window.location.pathname)) setNavHidden(true);
-		else setNavHidden(false);
+		if (!noNavBar.includes(window.location.pathname)) setNavHidden(false);
+		else setNavHidden(true);
 		// eslint-disable-next-line
 	}, [window.location.pathname]);
 

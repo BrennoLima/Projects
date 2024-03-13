@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, Fade, Stack, IconButton, Typography } from '@mui/material';
 import { CharacterIcon } from './CharacterIcon';
 import { FanArtIcon } from './FanArtIcon';
+import gsap from 'gsap';
 
 export const ActionButtons = () => {
 	const [label, setLabel] = useState('');
@@ -54,6 +55,7 @@ export const ActionButtons = () => {
 	const ActionButton = (icon) => {
 		return (
 			<IconButton
+				className='action-button'
 				onMouseEnter={() => setLabel(icon.icon)}
 				onMouseLeave={() => setLabel('')}
 				onClick={() => getAction(icon.icon)}
@@ -73,6 +75,31 @@ export const ActionButtons = () => {
 			</IconButton>
 		);
 	};
+
+	useEffect(() => {
+		gsap.fromTo(
+			'.action-button',
+			{ opacity: 0 },
+			{
+				opacity: '100%',
+				stagger: 0.1,
+				duration: 1,
+				ease: 'power3.in',
+				delay: 1,
+			}
+		);
+		gsap.fromTo(
+			'#scroll-down-button',
+			{ opacity: 0, y: 50 },
+			{
+				opacity: '100%',
+				y: 0,
+				duration: 1,
+				ease: 'linear',
+				delay: 1,
+			}
+		);
+	}, []);
 
 	return (
 		<Stack sx={{ py: 4 }} id='actions'>
@@ -107,6 +134,7 @@ export const ActionButtons = () => {
 			</Fade>
 			<Box sx={{ display: 'flex', justifyContent: 'center' }}>
 				<IconButton
+					id='scroll-down-button'
 					onClick={() => getAction('footer')}
 					sx={{
 						transition: '0.2s color ease-in',

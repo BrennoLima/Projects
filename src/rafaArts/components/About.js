@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
 	Box,
 	Container,
@@ -9,6 +9,7 @@ import {
 } from '@mui/material';
 import { SocialMedias } from './SocialMedias';
 import { useTheme } from '@emotion/react';
+import gsap from 'gsap';
 
 export const About = () => {
 	const theme = useTheme();
@@ -18,6 +19,40 @@ export const About = () => {
 			behavior: 'smooth',
 		});
 	};
+
+	useEffect(() => {
+		gsap.fromTo(
+			`#avatar`,
+			{ opacity: 0, y: 50 },
+			{
+				scrollTrigger: `#avatar`,
+				opacity: '100%',
+				y: 0,
+				duration: 1,
+			}
+		);
+		gsap.fromTo(
+			`#text1`,
+			{ opacity: 0, y: 50 },
+			{
+				scrollTrigger: `#text1`,
+				opacity: '100%',
+				y: 0,
+				duration: 1,
+			}
+		);
+		gsap.fromTo(
+			`#text2`,
+			{ opacity: 0, y: 50 },
+			{
+				scrollTrigger: `#text2`,
+				opacity: '100%',
+				y: 0,
+				duration: 1,
+			}
+		);
+	}, []);
+
 	return (
 		<Box
 			sx={{
@@ -26,24 +61,27 @@ export const About = () => {
 		>
 			<Container>
 				<Stack sx={{ py: [5, 10], alignItems: 'center' }} id='about'>
-					<Avatar
-						alt='Rafael Araujo'
-						src='https://media.licdn.com/dms/image/C4D03AQEIZ_L6XO2X_w/profile-displayphoto-shrink_800_800/0/1605626268766?e=1715212800&v=beta&t=emZBq3G2gdBOLTt8Kr7JG0b9p8KSaCMi_PXibR25gRU'
-						sx={{ width: '140px', height: '140px' }}
-					/>
-					<Typography
-						variant='h5'
-						sx={{ mt: 2, color: (theme) => theme.palette.text.primary }}
-					>
-						Rafael Araujo
-					</Typography>
-					<Typography
-						variant='caption'
-						sx={{ color: (theme) => theme.palette.text.secondary }}
-					>
-						3D Artist
-					</Typography>
-					<Box sx={{ p: 5, px: [2, 10] }}>
+					<Stack sx={{ alignItems: 'center' }} id='avatar'>
+						<Avatar
+							alt='Rafael Araujo'
+							src='https://media.licdn.com/dms/image/C4D03AQEIZ_L6XO2X_w/profile-displayphoto-shrink_800_800/0/1605626268766?e=1715212800&v=beta&t=emZBq3G2gdBOLTt8Kr7JG0b9p8KSaCMi_PXibR25gRU'
+							sx={{ width: '140px', height: '140px' }}
+						/>
+						<Typography
+							variant='h5'
+							sx={{ mt: 2, color: (theme) => theme.palette.text.primary }}
+						>
+							Rafael Araujo
+						</Typography>
+						<Typography
+							variant='caption'
+							sx={{ color: (theme) => theme.palette.text.secondary }}
+						>
+							3D Artist
+						</Typography>
+					</Stack>
+
+					<Box sx={{ p: 5, px: [2, 10] }} id='text1'>
 						<Typography
 							variant='body2'
 							align='center'
@@ -82,7 +120,10 @@ export const About = () => {
 							leaving an indelible mark on the world of 3D art.
 						</Typography>
 					</Box>
-					<Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+					<Box
+						sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}
+						id='text2'
+					>
 						<IconButton
 							onClick={scrollToActions}
 							sx={{

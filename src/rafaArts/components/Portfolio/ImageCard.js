@@ -18,7 +18,7 @@ export const ImageCard = ({ image }) => {
 					transition: 'all 0.5s ease',
 					borderRadius: 0,
 					':hover': {
-						transform: 'scale(1.1)',
+						transform: 'scale(1.05)',
 					},
 				}}
 			/>
