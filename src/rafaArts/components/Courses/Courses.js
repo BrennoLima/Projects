@@ -1,41 +1,24 @@
-import React from 'react';
-import {
-	Box,
-	Grid,
-	Typography,
-	Container,
-	Card,
-	CardActionArea,
-	CardMedia,
-	CardContent,
-} from '@mui/material';
+import React, { useEffect } from 'react';
+import { Box, Grid, Typography, Container } from '@mui/material';
 import { useTheme } from '@emotion/react';
-
-const CourseCard = ({ image, title, description, action }) => {
-	return (
-		<Card sx={{ maxWidth: 345 }}>
-			<CardActionArea>
-				<CardMedia
-					component='img'
-					src={image}
-					alt={title}
-					sx={{ height: '180px' }}
-				/>
-				<CardContent>
-					<Typography gutterBottom variant='h6' component='div'>
-						{title}
-					</Typography>
-					<Typography variant='caption' color='text.secondary'>
-						{description}
-					</Typography>
-				</CardContent>
-			</CardActionArea>
-		</Card>
-	);
-};
+import gsap from 'gsap';
+import { CourseCard } from './CourseCard';
 
 export const Courses = () => {
 	const theme = useTheme();
+	useEffect(() => {
+		gsap.fromTo(
+			`#course-title`,
+			{ opacity: 0, y: 50 },
+			{
+				scrollTrigger: `#course-title`,
+				opacity: '100%',
+				y: 0,
+				duration: 1,
+			}
+		);
+	}, []);
+
 	return (
 		<Box
 			sx={{
@@ -52,6 +35,7 @@ export const Courses = () => {
 					direction='row'
 					alignItems='center'
 					justifyContent='space-between'
+					className='course-container'
 				>
 					<Grid item xs={12}>
 						<Typography
@@ -59,7 +43,8 @@ export const Courses = () => {
 							variant='h4'
 							color='text.primary'
 							fontWeight={600}
-							sx={{ my: [4, 8] }}
+							sx={{ my: [4, 8], letterSpacing: '2px' }}
+							id='course-title'
 						>
 							Courses
 						</Typography>
@@ -74,6 +59,7 @@ export const Courses = () => {
 							title='Face Anatomy'
 							description='Designed to take you through the anatomy of the face, covering muscles, ligaments, facial, bones, veins & nerves.'
 							image='https://img.freepik.com/free-photo/3d-male-medical-figure-with-close-up-face-with-half-showing-muscle-map_1048-18783.jpg?size=1026&ext=jpg&ga=GA1.1.1395880969.1709596800&semt=ais'
+							id={1}
 						/>
 					</Grid>
 					<Grid
@@ -86,6 +72,7 @@ export const Courses = () => {
 							title='Zbrush'
 							description='Zbrush Made Easy! Ultimate Zbrush 3d sculpting course for beginners/intermediate.'
 							image='https://i.ytimg.com/vi/_yKGfcp2z3k/maxresdefault.jpg'
+							id={2}
 						/>
 					</Grid>
 					<Grid
@@ -98,6 +85,7 @@ export const Courses = () => {
 							title='Character Art'
 							description='Learn the complete fundamentals of Character Drawing, so you can learn to draw professional art and illustrations.'
 							image='https://static.skillshare.com/uploads/video/thumbnails/ff86a60ffdb5c8de8e38b62e62dd67ad/448-252'
+							id={3}
 						/>
 					</Grid>
 				</Grid>

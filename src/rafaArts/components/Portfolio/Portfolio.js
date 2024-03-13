@@ -40,6 +40,7 @@ export const Portfolio = () => {
 				buttonText='View Full Galery'
 				link='/galery'
 				sectionId='character-art'
+				sectionNum={1}
 			/>
 			<PortfolioSection
 				images={fanArt}
@@ -48,6 +49,7 @@ export const Portfolio = () => {
 				buttonText='View Instagram'
 				link='/galery'
 				sectionId='fan-art'
+				sectionNum={2}
 			/>
 			<PortfolioSection
 				images={products}
@@ -55,6 +57,7 @@ export const Portfolio = () => {
 				text='There will be some small section here to talk about the art. There will be some small section here to talk about the art'
 				buttonText='View Store'
 				link='/store'
+				sectionNum={3}
 			/>
 		</Grid>
 	);

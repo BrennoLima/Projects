@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Container, IconButton } from '@mui/material';
 import { Logo } from './Logo';
+// Gsap
+import gsap from 'gsap';
 
 export const Navbar = ({ mode, toggleMode }) => {
+	useEffect(() => {
+		gsap.fromTo(
+			'#rafa-logo',
+			{ opacity: 0 },
+			{ opacity: '100%', duration: 2, ease: 'power3.in' }
+		);
+		gsap.fromTo(
+			'#mode-switcher',
+			{ opacity: 0 },
+			{ opacity: '100%', duration: 2, ease: 'power3.in' }
+		);
+	}, []);
+
 	return (
 		<Container sx={{ position: 'relative' }}>
 			<Box sx={{ display: 'flex', justifyContent: 'center', py: 2 }}>
@@ -11,6 +26,7 @@ export const Navbar = ({ mode, toggleMode }) => {
 						width: ['5rem', '7rem'],
 						height: ['5rem', '7rem'],
 					}}
+					id='rafa-logo'
 				>
 					<Logo />
 				</Box>
@@ -27,6 +43,7 @@ export const Navbar = ({ mode, toggleMode }) => {
 						color: (theme) => theme.palette.text.primary,
 					},
 				}}
+				id='mode-switcher'
 			>
 				{mode === 'dark' ? (
 					<i className='fas fa-sun' key='sun' />

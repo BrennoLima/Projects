@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, Button, Link, Grid, Typography } from '@mui/material';
 // Slider
 import Slider from 'react-slick';
 // Components
 import { ImageCard } from './ImageCard';
 import useWindowDimension from '../../../components/hooks/useWindowDimension';
+// Gsap
+import gsap from 'gsap';
 
 export const PortfolioSection = ({
 	images,
@@ -13,6 +15,7 @@ export const PortfolioSection = ({
 	buttonText,
 	link,
 	sectionId,
+	sectionNum,
 }) => {
 	const { width } = useWindowDimension();
 	const slide1Ref = useRef(null);
@@ -25,6 +28,19 @@ export const PortfolioSection = ({
 		slidesToScroll: 1,
 		cssEase: 'linear',
 	};
+
+	useEffect(() => {
+		gsap.fromTo(
+			`.section-writing-${sectionNum}`,
+			{ opacity: 0, x: -50 },
+			{
+				scrollTrigger: `#container-${sectionNum}`,
+				opacity: '100%',
+				x: 0,
+				duration: 1,
+			}
+		);
+	}, [sectionNum]);
 
 	return (
 		<Grid
@@ -64,11 +80,13 @@ export const PortfolioSection = ({
 				xs={12}
 				md={4}
 				sx={{ p: [3, 5], display: 'flex', flexDirection: 'column' }}
+				id={`container-${sectionNum}`}
 			>
 				<Typography
 					color='text.primary'
 					variant={width > 900 ? 'h4' : 'h5'}
 					fontWeight={600}
+					className={`section-writing-${sectionNum}`}
 					sx={{
 						mb: 2,
 						letterSpacing: '2px',
@@ -76,11 +94,16 @@ export const PortfolioSection = ({
 				>
 					{title}
 				</Typography>
-				<Typography variant='subtitle2' color='text.secondary'>
+				<Typography
+					variant='subtitle2'
+					color='text.secondary'
+					className={`section-writing-${sectionNum}`}
+				>
 					{text}
 				</Typography>
 				<Box>
 					<Button
+						className={`section-writing-${sectionNum}`}
 						component={Link}
 						to={link}
 						sx={{
