@@ -9,10 +9,10 @@ import {
 // GSAP
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 export const CourseCard = ({ image, title, description, id }) => {
 	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		gsap.fromTo(
 			`#course-card-${id}`,
 			{ opacity: 0, y: 50 },

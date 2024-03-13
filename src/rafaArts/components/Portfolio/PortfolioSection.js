@@ -8,7 +8,6 @@ import useWindowDimension from '../../../components/hooks/useWindowDimension';
 // GSAP
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 export const PortfolioSection = ({
 	images,
@@ -32,6 +31,8 @@ export const PortfolioSection = ({
 	};
 
 	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
 		gsap.fromTo(
 			`.section-writing-${sectionNum}`,
 			{ opacity: 0, x: -50 },
