@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import { Box, Grid, Typography, Container } from '@mui/material';
 import { useTheme } from '@emotion/react';
-import gsap from 'gsap';
 import { CourseCard } from './CourseCard';
+// GSAP
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const Courses = () => {
 	const theme = useTheme();

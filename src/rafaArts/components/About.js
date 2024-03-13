@@ -9,7 +9,10 @@ import {
 } from '@mui/material';
 import { SocialMedias } from './SocialMedias';
 import { useTheme } from '@emotion/react';
+// GSAP
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const About = () => {
 	const theme = useTheme();

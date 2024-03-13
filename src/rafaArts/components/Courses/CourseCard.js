@@ -6,7 +6,10 @@ import {
 	CardMedia,
 	CardContent,
 } from '@mui/material';
+// GSAP
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const CourseCard = ({ image, title, description, id }) => {
 	useEffect(() => {

@@ -5,8 +5,10 @@ import Slider from 'react-slick';
 // Components
 import { ImageCard } from './ImageCard';
 import useWindowDimension from '../../../components/hooks/useWindowDimension';
-// Gsap
+// GSAP
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const PortfolioSection = ({
 	images,
