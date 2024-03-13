@@ -40,7 +40,7 @@ export const About = () => {
 			`#avatar`,
 			{ opacity: 0, y: 50 },
 			{
-				scrollTrigger: { trigger: '#avatar', markers: true },
+				ScrollTrigger: { trigger: '#avatar', markers: true },
 				opacity: '100%',
 				y: 0,
 				duration: 1,
@@ -61,7 +61,8 @@ export const About = () => {
 			`#text2`,
 			{ opacity: 0, y: 50 },
 			{
-				scrollTrigger: `#text2`,
+				ScrollTrigger: '#text2',
+				// scrollTrigger: `#text2`,
 				opacity: '100%',
 				y: 0,
 				duration: 1,
@@ -97,8 +98,9 @@ export const About = () => {
 						</Typography>
 					</Stack>
 
-					<Box sx={{ p: 5, px: [2, 10] }} id='text1'>
+					<Box sx={{ p: 5, px: [2, 10] }}>
 						<Typography
+							id='text1'
 							variant='body2'
 							align='center'
 							sx={{
@@ -115,6 +117,7 @@ export const About = () => {
 							professional setting.
 						</Typography>
 						<Typography
+							id='text2'
 							variant='body2'
 							align='center'
 							sx={{
