@@ -30,11 +30,11 @@ export const Logo = () => {
 					y2='100'
 					gradientUnits='userSpaceOnUse'
 				>
-					<stop stop-color={theme.palette.divider} />
+					<stop stopColor={theme.palette.divider} />
 					<stop
 						offset='1'
-						stop-color={theme.palette.primary.contrastText}
-						stop-opacity='0'
+						stopColor={theme.palette.primary.contrastText}
+						stopOpacity='0'
 					/>
 				</linearGradient>
 			</defs>
