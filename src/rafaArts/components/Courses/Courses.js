@@ -5,11 +5,11 @@ import { CourseCard } from './CourseCard';
 // GSAP
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
 
 export const Courses = () => {
 	const theme = useTheme();
 	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
 		gsap.fromTo(
 			`#course-title`,
 			{ opacity: 0, y: 50 },
