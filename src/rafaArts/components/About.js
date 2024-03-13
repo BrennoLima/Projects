@@ -10,8 +10,6 @@ import {
 import { SocialMedias } from './SocialMedias';
 import { useTheme } from '@emotion/react';
 // GSAP
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { gsap, ScrollTrigger } from 'gsap/all';
 
 export const About = () => {
@@ -30,7 +28,7 @@ export const About = () => {
 			'#avatar',
 			{ opacity: 0, y: 50 },
 			{
-				scrollTrigger: { trigger: '#avatar', markers: true },
+				scrollTrigger: '#avatar',
 				opacity: '100%',
 				y: 0,
 				duration: 1,
@@ -41,7 +39,7 @@ export const About = () => {
 			'#text1',
 			{ opacity: 0, y: 50 },
 			{
-				scrollTrigger: '#text',
+				scrollTrigger: '#text1',
 				opacity: '100%',
 				y: 0,
 				duration: 1,
