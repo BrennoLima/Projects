@@ -115,6 +115,14 @@ export const Landing = () => {
 			background: '#666666',
 			route: '/rafa-arts',
 		},
+		{
+			name: 'LHDesigns',
+			description: 'Portfolion website.',
+			company: 'Free lancer',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#3d0d45',
+			route: '/luhoca-designs',
+		},
 	]);
 	const onDisaplayProjects = allProjects.filter((project) =>
 		project.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())

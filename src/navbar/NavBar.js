@@ -25,7 +25,12 @@ export const NavBar = () => {
 			},
 		},
 	};
-	const [noNavBar] = useState(['/old-bank', '/payment-page', '/rafa-arts']);
+	const [noNavBar] = useState([
+		'/old-bank',
+		'/payment-page',
+		'/rafa-arts',
+		'/luhoca-designs',
+	]);
 	const [navHidden, setNavHidden] = useState(true);
 
 	useEffect(() => {
