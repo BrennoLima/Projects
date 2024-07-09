@@ -14,6 +14,7 @@ import { About } from './oldBank/components/About/About';
 import { Menu } from './oldBank/components/Menu/Menu';
 import { MenuCategory } from './oldBank/components/Menu/MenuCategory';
 import { Contact } from './oldBank/components/Contact/Contact';
+import { FishingLine } from './lhDesigns/graphicDesignRoutes/FishingLine/FishingLine';
 
 // Slick
 import 'slick-carousel/slick/slick.css';
@@ -41,6 +42,10 @@ export const App = () => {
 					 * LH designs Routes
 					 */}
 					<Route path='/luhoca-designs' element={<LHDesigns />} />
+					<Route
+						path='/luhoca-designs/graphic-design/fishing'
+						element={<FishingLine />}
+					/>
 					{/**
 					 * Rafa arts Routes
 					 */}

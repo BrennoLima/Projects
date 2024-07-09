@@ -69,6 +69,8 @@ export const LHDesigns = () => {
 					sx={{
 						height: 1,
 						background: (theme) => theme.palette.background.paper,
+						borderRight: 1,
+						borderColor: (theme) => theme.palette.primary.light,
 					}}
 				>
 					<Box
@@ -89,8 +91,6 @@ export const LHDesigns = () => {
 							onChange={(_, newValue) => setValue(newValue)}
 							aria-label='Menu'
 							sx={{
-								borderRight: 1,
-								borderColor: 'divider',
 								'& .MuiTab-root': {
 									justifyContent: 'flex-start',
 									fontSize: '16px',
@@ -138,6 +138,7 @@ export const LHDesigns = () => {
 					md={9}
 					sx={{
 						height: 1,
+						backgroundColor: '#fffef7',
 					}}
 				>
 					{value === 1 && <GraphicDesign />}

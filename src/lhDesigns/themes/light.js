@@ -5,9 +5,10 @@ export const lightTheme = createTheme({
 		mode: 'light',
 		primary: {
 			main: '#5f2b7f',
+			light: '#edddf6',
 		},
 		text: {
-			primary: '#002661',
+			primary: '#482161',
 			secondary: '#555555',
 		},
 		background: {
@@ -16,6 +17,6 @@ export const lightTheme = createTheme({
 		},
 	},
 	typography: {
-		fontFamily: "'Poppins', 'sans-serif'",
+		fontFamily: "'Bitter', 'sans-serif'",
 	},
 });

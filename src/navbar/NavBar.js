@@ -30,6 +30,7 @@ export const NavBar = () => {
 		'/payment-page',
 		'/rafa-arts',
 		'/luhoca-designs',
+		'/luhoca-designs/graphic-design/fishing',
 	]);
 	const [navHidden, setNavHidden] = useState(true);
 
