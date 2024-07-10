@@ -13,6 +13,7 @@ export const GraphicDesign = () => {
 		{
 			text: 'Craft Wine Brand Design',
 			image: 'assets/Images/LHDesigns/whine-vine-title.png',
+			link: '/luhoca-designs/graphic-design/whine',
 		},
 		{
 			text: 'Foodtruck Brand & Design',

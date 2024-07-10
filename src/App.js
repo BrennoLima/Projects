@@ -19,6 +19,7 @@ import { FishingLine } from './lhDesigns/graphicDesignRoutes/FishingLine/Fishing
 // Slick
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { WhinePage } from './lhDesigns/graphicDesignRoutes/Whine/WhinePage';
 
 export const App = () => {
 	return (
@@ -45,6 +46,10 @@ export const App = () => {
 					<Route
 						path='/luhoca-designs/graphic-design/fishing'
 						element={<FishingLine />}
+					/>
+					<Route
+						path='/luhoca-designs/graphic-design/whine'
+						element={<WhinePage />}
 					/>
 					{/**
 					 * Rafa arts Routes

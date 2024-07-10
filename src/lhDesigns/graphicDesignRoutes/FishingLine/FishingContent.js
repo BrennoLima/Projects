@@ -47,7 +47,7 @@ export const FishingContent = () => {
 						<Box
 							sx={{
 								borderLeft: '4px solid',
-								borderColor: '#ddd',
+								borderColor: '#ffde55',
 								p: 2,
 							}}
 						>
@@ -219,12 +219,20 @@ export const FishingContent = () => {
 				>
 					LAYOUT
 				</Typography>
-
-				<img
-					src='/assets/Images/LHDesigns/fishing-hook-mockup.png'
-					alt='fishing-hook-mockup'
-					style={{ width: isSmallScreen ? '100%' : '50%', height: 'auto' }}
-				/>
+				<Box
+					sx={{
+						width: 1,
+						backgroundColor: '#fffa7e',
+						display: 'flex',
+						justifyContent: 'center',
+					}}
+				>
+					<img
+						src='/assets/Images/LHDesigns/fishing-hook-mockup.png'
+						alt='fishing-hook-mockup'
+						style={{ width: isSmallScreen ? '100%' : '50%', height: 'auto' }}
+					/>
+				</Box>
 			</Grid>
 		</Grid>
 	);

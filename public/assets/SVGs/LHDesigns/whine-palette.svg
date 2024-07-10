@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 218.1 65.37">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #662455;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #3f3f3f;
+        font-family: Adelle-RegularItalic, Adelle;
+        font-size: 11.38px;
+        font-style: italic;
+      }
+
+      .cls-2 {
+        fill: #f27416;
+      }
+
+      .cls-5 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-6 {
+        fill: #fff;
+        stroke: #3f3f3f;
+        stroke-miterlimit: 10;
+        stroke-width: .47px;
+      }
+
+      .cls-3 {
+        fill: #3b8371;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(8.42 9.81)"><tspan x="0" y="0">#ffffff</tspan></text>
+  <text class="cls-4" transform="translate(63.15 9.81)"><tspan x="0" y="0">#f27416</tspan></text>
+  <text class="cls-4" transform="translate(117.26 9.81)"><tspan x="0" y="0">#662455</tspan></text>
+  <text class="cls-5" transform="translate(171.94 9.81)"><tspan x="0" y="0">#3b8371</tspan></text>
+  <path class="cls-1" d="M136.94,23.41c8.89,0,16.12,7.23,16.12,16.12s-7.23,16.12-16.12,16.12-16.12-7.23-16.12-16.12,7.23-16.12,16.12-16.12M136.94,13.92c-14.14,0-25.6,11.46-25.6,25.6s11.46,25.6,25.6,25.6,25.6-11.46,25.6-25.6-11.46-25.6-25.6-25.6h0Z"/>
+  <path class="cls-3" d="M192.49,23.41c8.89,0,16.12,7.23,16.12,16.12s-7.23,16.12-16.12,16.12-16.12-7.23-16.12-16.12,7.23-16.12,16.12-16.12M192.49,13.92c-14.14,0-25.6,11.46-25.6,25.6s11.46,25.6,25.6,25.6,25.6-11.46,25.6-25.6-11.46-25.6-25.6-25.6h0Z"/>
+  <path class="cls-6" d="M25.84,23.41c8.89,0,16.12,7.23,16.12,16.12s-7.23,16.12-16.12,16.12-16.12-7.23-16.12-16.12,7.23-16.12,16.12-16.12M25.84,13.92C11.7,13.92.24,25.39.24,39.53s11.46,25.6,25.6,25.6,25.6-11.46,25.6-25.6-11.46-25.6-25.6-25.6h0Z"/>
+  <path class="cls-2" d="M81.39,23.41c8.89,0,16.12,7.23,16.12,16.12s-7.23,16.12-16.12,16.12-16.12-7.23-16.12-16.12,7.23-16.12,16.12-16.12M81.39,13.92c-14.14,0-25.6,11.46-25.6,25.6s11.46,25.6,25.6,25.6,25.6-11.46,25.6-25.6-11.46-25.6-25.6-25.6h0Z"/>
+</svg>

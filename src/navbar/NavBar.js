@@ -31,6 +31,7 @@ export const NavBar = () => {
 		'/rafa-arts',
 		'/luhoca-designs',
 		'/luhoca-designs/graphic-design/fishing',
+		'/luhoca-designs/graphic-design/whine',
 	]);
 	const [navHidden, setNavHidden] = useState(true);
 
