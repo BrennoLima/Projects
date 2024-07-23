@@ -15,11 +15,13 @@ import { Menu } from './oldBank/components/Menu/Menu';
 import { MenuCategory } from './oldBank/components/Menu/MenuCategory';
 import { Contact } from './oldBank/components/Contact/Contact';
 import { FishingLine } from './lhDesigns/graphicDesignRoutes/FishingLine/FishingLine';
+import { WhinePage } from './lhDesigns/graphicDesignRoutes/Whine/WhinePage';
+import { TruckPage } from './lhDesigns/graphicDesignRoutes/Truck/TruckPage';
 
 // Slick
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { WhinePage } from './lhDesigns/graphicDesignRoutes/Whine/WhinePage';
+import { DukDukPage } from './lhDesigns/graphicDesignRoutes/DukDuk/DukDukPage';
 
 export const App = () => {
 	return (
@@ -50,6 +52,14 @@ export const App = () => {
 					<Route
 						path='/luhoca-designs/graphic-design/whine'
 						element={<WhinePage />}
+					/>
+					<Route
+						path='/luhoca-designs/graphic-design/tak-yo'
+						element={<TruckPage />}
+					/>
+					<Route
+						path='/luhoca-designs/graphic-design/dukduk'
+						element={<DukDukPage />}
 					/>
 					{/**
 					 * Rafa arts Routes

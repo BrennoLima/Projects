@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Card, Grid, IconButton, Typography } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 export const GraphicDesign = () => {
@@ -18,6 +18,7 @@ export const GraphicDesign = () => {
 		{
 			text: 'Foodtruck Brand & Design',
 			image: 'assets/Images/LHDesigns/food-truck-title.png',
+			link: '/luhoca-designs/graphic-design/tak-yo',
 		},
 		{ text: 'Graphic Comission', image: '' },
 		{
@@ -27,6 +28,22 @@ export const GraphicDesign = () => {
 		{
 			text: 'Bakery Brand & Brochure Design',
 			image: 'assets/Images/LHDesigns/dukduk-title.png',
+			link: '/luhoca-designs/graphic-design/dukduk',
+		},
+		{
+			text: 'Fishing Brand & Package Design',
+			image: 'assets/Images/LHDesigns/fishing-line-title.png',
+			link: '/luhoca-designs/graphic-design/fishing',
+		},
+		{
+			text: 'Craft Wine Brand Design',
+			image: 'assets/Images/LHDesigns/whine-vine-title.png',
+			link: '/luhoca-designs/graphic-design/whine',
+		},
+		{
+			text: 'Foodtruck Brand & Design',
+			image: 'assets/Images/LHDesigns/food-truck-title.png',
+			link: '/luhoca-designs/graphic-design/tak-yo',
 		},
 	];
 	const ImageCard = ({ text, image, link = '/' }) => (
@@ -47,7 +64,7 @@ export const GraphicDesign = () => {
 					},
 					'> img': {
 						transition: 'all 0.2s linear',
-						filter: 'brightness(50%)',
+						filter: 'brightness(25%)',
 					},
 				},
 				height: 1,
@@ -69,64 +86,17 @@ export const GraphicDesign = () => {
 	);
 
 	return (
-		<Box sx={{ height: 1 }}>
-			<Box
-				sx={{
-					height: '10vh',
-					display: 'flex',
-					alignItems: 'flex-end',
-					justifyContent: 'center',
-				}}
-			>
-				<Typography
-					fontWeight='bold'
-					variant='h4'
-					textAlign='center'
-					color='text.primary'
-				>
-					Graphic Design
-				</Typography>
-			</Box>
-			<Box sx={{ height: '90vh', display: 'flex', alignItems: 'center' }}>
-				<Grid
-					container
-					direction='row'
-					alignItems='center'
-					justifyContent='center'
-					gap={3}
-				>
-					{graphicDesignItems.map((item, index) => (
-						<Grid
-							item
-							xs={12}
-							md={3}
-							sx={{ width: 1, height: '30vh' }}
-							key={index}
-						>
-							<ImageCard text={item.text} image={item.image} link={item.link} />
-						</Grid>
-					))}
-					<Grid
-						item
-						xs={12}
-						container
-						direction='row'
-						alignItems='center'
-						justifyContent='center'
-					>
-						<Grid item>
-							<IconButton sx={{ width: '42px', height: '42px' }}>
-								<i className='fas fa-chevron-left' />
-							</IconButton>
-						</Grid>
-						<Grid item>
-							<IconButton sx={{ width: '42px', height: '42px' }}>
-								<i className='fas fa-chevron-right' />
-							</IconButton>
-						</Grid>
-					</Grid>
+		<Grid
+			container
+			direction='row'
+			alignItems='center'
+			justifyContent='space-between'
+		>
+			{graphicDesignItems.map((item, index) => (
+				<Grid item xs={12} md={4} key={index}>
+					<ImageCard text={item.text} image={item.image} link={item.link} />
 				</Grid>
-			</Box>
-		</Box>
+			))}
+		</Grid>
 	);
 };

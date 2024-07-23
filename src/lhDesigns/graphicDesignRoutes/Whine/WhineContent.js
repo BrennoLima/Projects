@@ -174,7 +174,7 @@ export const WhineContent = () => {
 				<Box>
 					<img
 						src='/assets/SVGs/LHDesigns/whine-signage.svg'
-						alt='fish-horizontal-logo'
+						alt='whine-signage'
 						style={{
 							width: isSmallScreen ? '100%' : '50%',
 							height: 'auto',
