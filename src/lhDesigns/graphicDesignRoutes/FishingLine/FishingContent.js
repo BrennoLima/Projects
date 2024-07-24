@@ -31,7 +31,9 @@ export const FishingContent = () => {
 				<Link underline='hover' color='inherit' href='/luhoca-designs'>
 					Graphic Design
 				</Link>
-				<Typography color='text.primary'>Fisch</Typography>
+				<Typography fontWeight='bold' color='primary'>
+					Fisch
+				</Typography>
 			</Breadcrumbs>
 			<Grid
 				item

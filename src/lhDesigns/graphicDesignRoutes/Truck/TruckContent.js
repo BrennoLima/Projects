@@ -31,7 +31,9 @@ export const TruckContent = () => {
 				<Link underline='hover' color='inherit' href='/luhoca-designs'>
 					Graphic Design
 				</Link>
-				<Typography color='text.primary'>TAK-YO</Typography>
+				<Typography fontWeight='bold' color='primary'>
+					TAK-YO
+				</Typography>
 			</Breadcrumbs>
 			<Grid
 				item

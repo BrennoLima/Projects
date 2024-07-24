@@ -5,6 +5,7 @@ import { Container, Box, Tab, Grid, Tabs } from '@mui/material';
 import { lightTheme } from '../themes/light';
 import LHLogo from '../logo.png';
 import { useNavigate } from 'react-router-dom';
+import { SocialMedias } from './SocialMedias';
 
 export const PageContainer = ({ children }) => {
 	const theme = createTheme(lightTheme);
@@ -47,7 +48,7 @@ export const PageContainer = ({ children }) => {
 							>
 								<img src={LHLogo} alt='LH-logo' style={{ width: '100%' }} />
 							</Box>
-							<Box sx={{ flex: 1, mt: '20%' }}>
+							<Box sx={{ flex: 1, mt: '20%', mb: 5 }}>
 								<Tabs
 									variant='fullWidth'
 									orientation='vertical'
@@ -80,14 +81,15 @@ export const PageContainer = ({ children }) => {
 										},
 									}}
 								>
-									<Tab iconPosition='start' label='Graphic Design' />
-									<Tab iconPosition='start' label='Event Planning' />
 									<Tab iconPosition='start' label='Illustration' />
+									<Tab iconPosition='start' label='Event Planning' />
+									<Tab iconPosition='start' label='Graphic Design' />
 									<Tab iconPosition='start' label='About Me' />
 									<Tab iconPosition='start' label='Services' />
 									<Tab iconPosition='start' label='Contact' />
 								</Tabs>
 							</Box>
+							<SocialMedias />
 						</Grid>
 						<Grid
 							item
