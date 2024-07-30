@@ -1,25 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link, IconButton, Stack } from '@mui/material';
-// Gsap
-import gsap from 'gsap';
 
-export const SocialMedias = ({ direction = 'row' }) => {
+export const SocialMedias = ({ direction = 'row', size = 'small' }) => {
 	const btnClass = {
 		transition: '0.2s color ease-in',
 		'&:hover': {
 			color: (theme) => theme.palette.text.primary,
 		},
 	};
-
-	useEffect(() => {
-		if (direction === 'column') {
-			gsap.fromTo(
-				'.social-btn',
-				{ x: -20, opacity: 0 },
-				{ x: 0, opacity: 1, stagger: 0.2, duration: 1, delay: 1 }
-			);
-		}
-	}, [direction]);
 
 	return (
 		<Stack
@@ -30,7 +18,7 @@ export const SocialMedias = ({ direction = 'row' }) => {
 		>
 			<IconButton
 				className='social-btn'
-				size='small'
+				size={size}
 				sx={btnClass}
 				href='https://www.instagram.com/luciehoca_illustration/'
 				target='_blank'
@@ -39,7 +27,7 @@ export const SocialMedias = ({ direction = 'row' }) => {
 			</IconButton>
 			<IconButton
 				className='social-btn'
-				size='small'
+				size={size}
 				sx={btnClass}
 				href='https://www.linkedin.com/in/lucie-hoca-b03019172/'
 				target='_blank'
@@ -49,7 +37,7 @@ export const SocialMedias = ({ direction = 'row' }) => {
 			<IconButton
 				component={Link}
 				className='social-btn'
-				size='small'
+				size={size}
 				sx={btnClass}
 				href='mailto:hocalucie98@gmail.com'
 			>

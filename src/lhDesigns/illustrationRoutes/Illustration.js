@@ -30,10 +30,11 @@ export const Illustration = () => {
 		},
 	];
 
-	const ImageCard = ({ text, image, link = '/' }) => (
+	const ImageCard = ({ text, image }) => (
 		<Card
 			onClick={() => setOpenImage(image)}
 			sx={{
+				cursor: 'zoom-in',
 				position: 'relative',
 				'> p': {
 					display: 'none',
@@ -56,7 +57,6 @@ export const Illustration = () => {
 				display: 'flex',
 				alignItems: 'center',
 				justifyContent: 'center',
-				cursor: 'pointer',
 			}}
 		>
 			<img
@@ -82,7 +82,7 @@ export const Illustration = () => {
 				</Grid>
 			))}
 			<Dialog
-				open={openImage}
+				open={openImage !== null}
 				onClose={() => setOpenImage(null)}
 				maxWidth='md'
 				sx={{
