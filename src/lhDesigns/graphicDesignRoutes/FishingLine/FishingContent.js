@@ -28,7 +28,11 @@ export const FishingContent = () => {
 				</Box>
 			</Grid>
 			<Breadcrumbs aria-label='breadcrumb' sx={{ pb: 4 }}>
-				<Link underline='hover' color='inherit' href='/luhoca-designs'>
+				<Link
+					underline='hover'
+					color='inherit'
+					href='/luhoca-designs#graphicDesign'
+				>
 					Graphic Design
 				</Link>
 				<Typography fontWeight='bold' color='primary'>

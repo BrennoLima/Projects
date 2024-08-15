@@ -7,6 +7,8 @@ import { GraphicDesign } from './graphicDesignRoutes/GraphicDesign';
 import { Illustration } from './illustrationRoutes/Illustration';
 import { DesktopMenu } from './components/DesktopMenu';
 import { MobileMenu } from './components/MobileMenu';
+import { AboutMe } from './components/AboutMe';
+import { Contact } from './components/Contact';
 
 export const LHDesigns = () => {
 	const theme = createTheme(lightTheme);
@@ -72,9 +74,9 @@ export const LHDesigns = () => {
 							{value === 0 && <Illustration />}
 							{value === 1 && 'Event Planning'}
 							{value === 2 && <GraphicDesign />}
-							{value === 3 && 'About Me'}
+							{value === 3 && <AboutMe />}
 							{value === 4 && 'Servies'}
-							{value === 5 && 'Contact'}
+							{value === 5 && <Contact />}
 						</Grid>
 					</Grid>
 				</Container>

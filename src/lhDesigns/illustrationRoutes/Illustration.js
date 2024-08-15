@@ -3,6 +3,7 @@ import { Dialog, Card, Grid, Typography } from '@mui/material';
 
 export const Illustration = () => {
 	const [openImage, setOpenImage] = useState(null);
+	const [altText, setAltText] = useState('');
 	const illustrationItems = [
 		{
 			text: 'Jaguar with Socks',
@@ -32,7 +33,10 @@ export const Illustration = () => {
 
 	const ImageCard = ({ text, image }) => (
 		<Card
-			onClick={() => setOpenImage(image)}
+			onClick={() => {
+				setOpenImage(image);
+				setAltText(text);
+			}}
 			sx={{
 				cursor: 'zoom-in',
 				position: 'relative',
@@ -89,7 +93,11 @@ export const Illustration = () => {
 					'& .MuiBackdrop-root': { backgroundColor: 'rgba(0,0,0,0.75)' },
 				}}
 			>
-				<img src={openImage} alt='' style={{ width: 'auto', height: '90vh' }} />
+				<img
+					src={openImage}
+					alt={altText}
+					style={{ width: 'auto', height: '90vh' }}
+				/>
 			</Dialog>
 		</Grid>
 	);
