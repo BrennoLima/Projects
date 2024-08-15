@@ -20,7 +20,7 @@ export const GraphicDesign = () => {
 			image: 'assets/Images/LHDesigns/food-truck-title.png',
 			link: '/luhoca-designs/graphic-design/tak-yo',
 		},
-		{ text: 'Graphic Comission', image: '' },
+		// { text: 'Graphic Comission', image: '' },
 		{
 			text: 'Wedding Prints & Designs',
 			image: 'assets/Images/LHDesigns/wedding-design-title.png',
@@ -90,7 +90,7 @@ export const GraphicDesign = () => {
 			container
 			direction='row'
 			alignItems='center'
-			justifyContent='space-between'
+			justifyContent='flex-start'
 		>
 			{graphicDesignItems.map((item, index) => (
 				<Grid item xs={12} md={4} key={index}>

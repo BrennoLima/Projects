@@ -91,17 +91,17 @@ export const Landing = () => {
 			background: '#1D8321',
 			route: '/creative-card',
 		},
-		{
-			name: 'NFTs galery',
-			description: 'A place to display my NFTs, fetching the OpenSea API.',
-			company: 'Own project',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP #WEB3',
-			background: '#d86a1f',
-			route: '/nfts-galery',
-		},
+		// {
+		// 	name: 'NFTs galery',
+		// 	description: 'A place to display my NFTs, fetching the OpenSea API.',
+		// 	company: 'Own project',
+		// 	tags: '#JavaScript #React #CSS #MaterialUI #GSAP #WEB3',
+		// 	background: '#d86a1f',
+		// 	route: '/nfts-galery',
+		// },
 		{
 			name: 'Old Bank Cafe',
-			description: 'Landing page for Old Bank Cafe',
+			description: 'Old Bank Cafe',
 			company: 'Own project',
 			tags: '#JavaScript #React #CSS #MaterialUI #GSAP #SCROLLTRIGGER',
 			background: '#c9a200',
@@ -110,7 +110,7 @@ export const Landing = () => {
 		{
 			name: 'RafaArts',
 			description: 'Portfolion website.',
-			company: 'Free lancer',
+			company: 'Own project',
 			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
 			background: '#666666',
 			route: '/rafa-arts',
@@ -118,9 +118,9 @@ export const Landing = () => {
 		{
 			name: 'LHDesigns',
 			description: 'Portfolion website.',
-			company: 'Free lancer',
+			company: 'Own project',
 			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
-			background: '#3d0d45',
+			background: '#65306e',
 			route: '/luhoca-designs',
 		},
 	]);
