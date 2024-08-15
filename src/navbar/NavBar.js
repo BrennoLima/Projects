@@ -29,7 +29,11 @@ export const NavBar = () => {
 	const [navHidden, setNavHidden] = useState(true);
 
 	useEffect(() => {
-		if (!noNavBar.includes(window.location.pathname)) setNavHidden(false);
+		if (
+			!noNavBar.includes(window.location.pathname) &&
+			window.location.pathname.indexOf('luhoca-designs') < 0
+		)
+			setNavHidden(false);
 		else setNavHidden(true);
 		// eslint-disable-next-line
 	}, [window.location.pathname]);
