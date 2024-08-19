@@ -29,6 +29,42 @@ export const Illustration = () => {
 			text: 'The Alchemist',
 			image: 'assets/Images/LHDesigns/Illustrations/Illustration6.jpg',
 		},
+		{
+			text: 'Fantasy Bull',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration7.jpg',
+		},
+		{
+			text: 'Cerberus and Owl',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration8.jpg',
+		},
+		{
+			text: 'Drowning Pig',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration9.jpg',
+		},
+		{
+			text: `Dragon's Den`,
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration10.jpg',
+		},
+		{
+			text: 'Buzzing Bee',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration11.jpg',
+		},
+		{
+			text: 'Tiger',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration12.jpg',
+		},
+		{
+			text: 'Fruit Bat',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration13.jpg',
+		},
+		{
+			text: 'Kitten',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration14.jpg',
+		},
+		{
+			text: 'Sacrificial Lamb',
+			image: 'assets/Images/LHDesigns/Illustrations/Illustration15.jpg',
+		},
 	];
 
 	const ImageCard = ({ text, image }) => (
@@ -38,6 +74,7 @@ export const Illustration = () => {
 				setAltText(text);
 			}}
 			sx={{
+				borderRadius: 0,
 				cursor: 'zoom-in',
 				position: 'relative',
 				'> p': {
