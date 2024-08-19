@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Tab, Grid, Tabs } from '@mui/material';
 
-import LHLogo from '../logo.png';
 import { SocialMedias } from '../components/SocialMedias';
 import { useNavigate } from 'react-router-dom';
 
@@ -43,6 +42,7 @@ export const DesktopMenu = ({ redirect, value, setValue }) => {
 				background: (theme) => theme.palette.background.paper,
 				borderRight: 1,
 				borderColor: (theme) => theme.palette.primary.light,
+				py: '5vh',
 			}}
 		>
 			<Box
@@ -51,12 +51,15 @@ export const DesktopMenu = ({ redirect, value, setValue }) => {
 					padding: 4,
 					display: 'flex',
 					justifyContent: 'center',
-					mt: 5,
 				}}
 			>
-				<img src={LHLogo} alt='LH-logo' style={{ width: '100%' }} />
+				<img
+					src='assets/Images/LHDesigns/Illustrations/LH-Logo.png'
+					alt='LH-logo'
+					style={{ width: '100%' }}
+				/>
 			</Box>
-			<Box sx={{ flex: 1, mt: '20%', mb: 5 }}>
+			<Box sx={{ flex: 1, py: '5vh' }}>
 				<Tabs
 					variant='fullWidth'
 					orientation='vertical'
