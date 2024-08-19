@@ -20,30 +20,10 @@ export const GraphicDesign = () => {
 			image: 'assets/Images/LHDesigns/food-truck-title.png',
 			link: '/luhoca-designs/graphic-design/tak-yo',
 		},
-		// { text: 'Graphic Comission', image: '' },
-		{
-			text: 'Wedding Prints & Designs',
-			image: 'assets/Images/LHDesigns/wedding-design-title.png',
-		},
 		{
 			text: 'Bakery Brand & Brochure Design',
 			image: 'assets/Images/LHDesigns/dukduk-title.png',
 			link: '/luhoca-designs/graphic-design/dukduk',
-		},
-		{
-			text: 'Fishing Brand & Package Design',
-			image: 'assets/Images/LHDesigns/fishing-line-title.png',
-			link: '/luhoca-designs/graphic-design/fishing',
-		},
-		{
-			text: 'Craft Wine Brand Design',
-			image: 'assets/Images/LHDesigns/whine-vine-title.png',
-			link: '/luhoca-designs/graphic-design/whine',
-		},
-		{
-			text: 'Foodtruck Brand & Design',
-			image: 'assets/Images/LHDesigns/food-truck-title.png',
-			link: '/luhoca-designs/graphic-design/tak-yo',
 		},
 	];
 	const ImageCard = ({ text, image, link = '/' }) => (

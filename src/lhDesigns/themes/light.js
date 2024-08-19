@@ -17,6 +17,7 @@ export const lightTheme = createTheme({
 		},
 	},
 	typography: {
-		fontFamily: "'Bitter', 'sans-serif'",
+		fontSize: 18,
+		fontFamily: "'Zain', 'sans-serif'",
 	},
 });
