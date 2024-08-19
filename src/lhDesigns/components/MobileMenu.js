@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { IconButton, Tab, Grid, Tabs, Dialog } from '@mui/material';
 
-import LHLogo from '../logo.png';
 import { useNavigate } from 'react-router-dom';
 import { SocialMedias } from '../components/SocialMedias';
 
@@ -46,7 +45,11 @@ export const MobileMenu = ({ redirect, value, setValue }) => {
 				background: '#faf2ff',
 			}}
 		>
-			<img src={LHLogo} alt='LH-logo' style={{ width: '30%' }} />
+			<img
+				src='assets/Images/LHDesigns/Illustrations/LH-Logo.png'
+				alt='LH-logo'
+				style={{ width: '30%' }}
+			/>
 			<IconButton onClick={() => setIsMenuOpen(true)}>
 				<i className='fas fa-bars' key='menu' />
 			</IconButton>
@@ -67,8 +70,11 @@ export const MobileMenu = ({ redirect, value, setValue }) => {
 							p: 2,
 						}}
 					>
-						<img src={LHLogo} alt='LH-logo' style={{ width: '30%' }} />
-						<IconButton onClick={() => setIsMenuOpen(false)}>
+						<img
+							src='assets/Images/LHDesigns/Illustrations/LH-Logo.png'
+							alt='LH-logo'
+						/>
+						<IconButton size='small' onClick={() => setIsMenuOpen(false)}>
 							<i className='fas fa-times' key='close' />
 						</IconButton>
 					</Grid>
