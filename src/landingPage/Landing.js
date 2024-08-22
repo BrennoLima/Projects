@@ -123,6 +123,14 @@ export const Landing = () => {
 			background: '#65306e',
 			route: '/luhoca-designs',
 		},
+		{
+			name: 'PanelCraft Interiors',
+			description: '',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#CD6C29',
+			route: '/panelcraft-interiors',
+		},
 	]);
 	const onDisaplayProjects = allProjects.filter((project) =>
 		project.name.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())
