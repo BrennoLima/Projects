@@ -31,7 +31,8 @@ export const NavBar = () => {
 	useEffect(() => {
 		if (
 			!noNavBar.includes(window.location.pathname) &&
-			window.location.pathname.indexOf('luhoca-designs') < 0
+			window.location.pathname.indexOf('luhoca-designs') < 0 &&
+			window.location.pathname.indexOf('panelcraft-interiors') < 0
 		)
 			setNavHidden(false);
 		else setNavHidden(true);

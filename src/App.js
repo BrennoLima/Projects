@@ -17,7 +17,7 @@ import { Contact } from './oldBank/components/Contact/Contact';
 import { FishingLine } from './lhDesigns/graphicDesignRoutes/FishingLine/FishingLine';
 import { WhinePage } from './lhDesigns/graphicDesignRoutes/Whine/WhinePage';
 import { TruckPage } from './lhDesigns/graphicDesignRoutes/Truck/TruckPage';
-
+import { PanelCraftInteriors } from './WoodPros/Landing';
 // Slick
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -41,6 +41,13 @@ export const App = () => {
 					<Route path='/payment-page' element={<PaymentPage />} />
 					<Route path='/mortgage-calculator' element={<MortgageCalculator />} />
 					<Route path='/nfts-galery' element={<NFTsGalery />} />
+					{/**
+					 * PanelCraftInteriors
+					 */}
+					<Route
+						path='/panelcraft-interiors'
+						element={<PanelCraftInteriors />}
+					/>
 					{/**
 					 * LH designs Routes
 					 */}
