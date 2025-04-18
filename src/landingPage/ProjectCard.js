@@ -45,7 +45,8 @@ export const ProjectCard = ({ project }) => {
 			justifyContent='center'
 			sx={classes.container}
 			component={Link}
-			href={project.route}
+			href={project.link || project.route}
+			target='__blank'
 		>
 			<Grid item xs={12} sx={{ paddingBottom: '16px' }}>
 				<Typography sx={classes.name}>{project.name}</Typography>

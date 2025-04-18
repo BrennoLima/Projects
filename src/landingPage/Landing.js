@@ -66,6 +66,55 @@ export const Landing = () => {
 	const [searchInput, setSearchInput] = useState('');
 	const [allProjects] = useState([
 		{
+			name: 'Animated Portfolio',
+			description: 'My portfolio displayed in an interactive way',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#4b427c',
+			link: 'https://main.d3324w9pa0v55y.amplifyapp.com/',
+		},
+		{
+			name: 'MetaFit',
+			description:
+				'AI fitness coach designed to create workout routines and nutrition plans',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#305685',
+			link: 'https://main.d13hl5ygpmqiz5.amplifyapp.com/',
+		},
+		{
+			name: 'RafaArts',
+			description: 'Portfolion website for a 3d artist.',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#666666',
+			route: '/rafa-arts',
+		},
+		{
+			name: 'PanelCraft Interiors',
+			description: 'Landing page for a wood interior design company',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#CD6C29',
+			route: '/panelcraft-interiors',
+		},
+		{
+			name: 'LHDesigns',
+			description: 'Portfolion website for an illustrator.',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#65306e',
+			route: '/luhoca-designs',
+		},
+		{
+			name: 'Old Bank Cafe',
+			description: 'Coffee Shop page',
+			company: 'Own project',
+			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
+			background: '#c9a200',
+			route: '/old-bank',
+		},
+		{
 			name: 'Mortgage calculator',
 			description:
 				'Mortgage calculator application with graphs and animations.',
@@ -90,46 +139,6 @@ export const Landing = () => {
 			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
 			background: '#1D8321',
 			route: '/creative-card',
-		},
-		// {
-		// 	name: 'NFTs galery',
-		// 	description: 'A place to display my NFTs, fetching the OpenSea API.',
-		// 	company: 'Own project',
-		// 	tags: '#JavaScript #React #CSS #MaterialUI #GSAP #WEB3',
-		// 	background: '#d86a1f',
-		// 	route: '/nfts-galery',
-		// },
-		{
-			name: 'Old Bank Cafe',
-			description: 'Old Bank Cafe',
-			company: 'Own project',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP #SCROLLTRIGGER',
-			background: '#c9a200',
-			route: '/old-bank',
-		},
-		{
-			name: 'RafaArts',
-			description: 'Portfolion website.',
-			company: 'Own project',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
-			background: '#666666',
-			route: '/rafa-arts',
-		},
-		{
-			name: 'LHDesigns',
-			description: 'Portfolion website.',
-			company: 'Own project',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
-			background: '#65306e',
-			route: '/luhoca-designs',
-		},
-		{
-			name: 'PanelCraft Interiors',
-			description: '',
-			company: 'Own project',
-			tags: '#JavaScript #React #CSS #MaterialUI #GSAP',
-			background: '#CD6C29',
-			route: '/panelcraft-interiors',
 		},
 	]);
 	const onDisaplayProjects = allProjects.filter((project) =>
@@ -187,7 +196,7 @@ export const Landing = () => {
 						color='primary'
 						sx={classes.roundInput}
 						size='small'
-						placeholder='Project name, company, keywords...'
+						placeholder='Project name, keywords...'
 						autoComplete='off'
 						value={searchInput}
 						onChange={(e) => setSearchInput(e.target.value)}
